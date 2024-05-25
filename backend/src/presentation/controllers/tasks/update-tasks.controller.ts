@@ -10,7 +10,6 @@ export class UpdateTaskController implements Controller {
     try {
       const { id } = request.params as IUpdateTask.Params
       const updateData = request.body as IUpdateTask.Params
-      console.log(updateData)
       const result = await this.updateTaskUsecase.updateTask({ id, ...updateData })
 
       if (result === MESSAGES.TaskNotFound(id)) return notFound(result)

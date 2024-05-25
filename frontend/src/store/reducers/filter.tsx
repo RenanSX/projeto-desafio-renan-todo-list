@@ -1,12 +1,12 @@
-import { VisibilityFilters, FilterActionTypes } from '../../types';
+import { VisibilityFilters, FilterActionTypes } from '../../types'
 
 const filterReducer = (state = VisibilityFilters.SHOW_ALL, { type, payload }: FilterActionTypes) => {
   switch (type) {
     case VisibilityFilters.UPDATE_FILTER:
-      return payload.filter;
+      return payload.filter
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default filterReducer;
+export default filterReducer

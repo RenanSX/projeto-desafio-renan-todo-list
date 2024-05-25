@@ -7,6 +7,6 @@ const EmptyMessage = ({ message }: EmptyMessageProps) => (
     <i className="fas fa-clipboard-list empty-icon" />
     <span>{message}</span>
   </div>
-);
+)
 
-export default EmptyMessage;
+export default EmptyMessage

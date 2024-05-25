@@ -1,36 +1,40 @@
-import { FormEvent, useRef, useEffect } from 'react';
+import { FormEvent, useRef, useEffect } from 'react'
 
 interface TodoFormProps {
-  emptyList: boolean,
-  addItem(title: string, description: string): void,
+  emptyList: boolean
+  addItem(title: string, description: string): void
 }
 
 const TodoForm = ({ emptyList, addItem }: TodoFormProps) => {
-  const inputText = useRef<HTMLInputElement>(null);
-  const inputDescription = useRef<HTMLInputElement>(null);
+  const inputText = useRef<HTMLInputElement>(null)
+  const inputDescription = useRef<HTMLInputElement>(null)
 
-  const focusInputText = () => inputText?.current?.focus();
-  const focusInputDescription = () => inputDescription?.current?.focus();
+  const focusInputText = () => inputText?.current?.focus()
+  const focusInputDescription = () => inputDescription?.current?.focus()
 
   useEffect(() => {
     if (emptyList) {
-      focusInputText();
-      focusInputDescription();
+      focusInputText()
+      focusInputDescription()
     }
-  });
+  })
 
   const submitHandler = (e: FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
 
     if (
-      (inputText && inputText.current && inputText.current.value !== '') &&
-      (inputDescription && inputDescription.current && inputDescription.current.value !== '')
+      inputText &&
+      inputText.current &&
+      inputText.current.value !== '' &&
+      inputDescription &&
+      inputDescription.current &&
+      inputDescription.current.value !== ''
     ) {
-      addItem(inputText.current.value, inputDescription.current.value);
-      inputText.current.value = '';
-      inputDescription.current.value = '';
+      addItem(inputText.current.value, inputDescription.current.value)
+      inputText.current.value = ''
+      inputDescription.current.value = ''
     }
-  };
+  }
 
   return (
     <form onSubmit={submitHandler}>
@@ -40,7 +44,7 @@ const TodoForm = ({ emptyList, addItem }: TodoFormProps) => {
         <i className="fas fa-plus" />
       </button>
     </form>
-  );
-};
+  )
+}
 
-export default TodoForm;
+export default TodoForm

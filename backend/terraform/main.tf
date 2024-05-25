@@ -2,17 +2,17 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_vpc" "vpc_teste" {
+resource "aws_vpc" "vpc_todo_list" {
   cidr_block           = "10.0.0.0/16"
   enable_dns_hostnames = true
 
   tags = {
-    Name = "VPC Teste"
+    Name = "VPC Todo List"
   }
 }
 
 resource "aws_internet_gateway" "igw" {
-  vpc_id = aws_vpc.vpc_teste.id
+  vpc_id = aws_vpc.vpc_todo_list.id
 
   tags = {
     Name = "IGW"
@@ -20,7 +20,7 @@ resource "aws_internet_gateway" "igw" {
 }
 
 resource "aws_subnet" "public_subnet_a" {
-  vpc_id            = aws_vpc.vpc_teste.id
+  vpc_id            = aws_vpc.vpc_todo_list.id
   cidr_block        = "10.0.1.0/24"
   availability_zone = "us-east-1a"
 
@@ -30,7 +30,7 @@ resource "aws_subnet" "public_subnet_a" {
 }
 
 resource "aws_subnet" "public_subnet_b" {
-  vpc_id            = aws_vpc.vpc_teste.id
+  vpc_id            = aws_vpc.vpc_todo_list.id
   cidr_block        = "10.0.2.0/24"
   availability_zone = "us-east-1b"
 
@@ -40,7 +40,7 @@ resource "aws_subnet" "public_subnet_b" {
 }
 
 resource "aws_route_table" "public_route_table" {
-  vpc_id = aws_vpc.vpc_teste.id
+  vpc_id = aws_vpc.vpc_todo_list.id
 
   route {
     cidr_block = "0.0.0.0/0"
@@ -63,7 +63,7 @@ resource "aws_route_table_association" "a_b" {
 }
 
 resource "aws_security_group" "db_security_group" {
-  vpc_id = aws_vpc.vpc_teste.id
+  vpc_id = aws_vpc.vpc_todo_list.id
 
   ingress {
     from_port   = 3306
@@ -98,7 +98,7 @@ resource "aws_db_instance" "bancodedados" {
   engine                 = "mysql"
   engine_version         = "8.0.35"
   instance_class         = "db.t3.micro"
-  db_name                = "databaseone"
+  db_name                = "db-desafio-renan"
   username               = "admin"
   password               = "mypassword"
   skip_final_snapshot    = true

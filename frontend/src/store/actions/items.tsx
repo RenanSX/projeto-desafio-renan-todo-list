@@ -1,27 +1,27 @@
-import { Item, ItemsTypes } from '../../types';
+import { Item, ItemsTypes } from '../../types'
 
 export const addItem = (title: string, description: string) => ({
   type: ItemsTypes.ADD_ITEM,
   payload: {
     title,
     description
-  },
-});
+  }
+})
 
 export const toggleItem = (uuid: string, completed: boolean) => ({
   type: ItemsTypes.TOGGLE_ITEM,
   payload: {
     uuid,
     completed
-  },
-});
+  }
+})
 
 export const toggleEditItem = (uuid: string) => ({
   type: ItemsTypes.TOGGLE_EDIT_ITEM,
   payload: {
-    uuid,
-  },
-});
+    uuid
+  }
+})
 
 export const updateItem = (uuid: string, title: string, description: string) => ({
   type: ItemsTypes.UPDATE_ITEM,
@@ -29,25 +29,25 @@ export const updateItem = (uuid: string, title: string, description: string) => 
     uuid,
     title,
     description
-  },
-});
+  }
+})
 
 export const removeItem = (uuid: string) => ({
   type: ItemsTypes.REMOVE_ITEM,
   payload: {
-    uuid,
-  },
-});
+    uuid
+  }
+})
 
 export const loadRequest = () => ({
-  type: ItemsTypes.LOAD_REQUEST,
-});
+  type: ItemsTypes.LOAD_REQUEST
+})
 
 export const loadSuccess = (data: Item[]) => ({
   type: ItemsTypes.LOAD_SUCCESS,
-  data,
-});
+  data
+})
 
 export const loadFailure = () => ({
-  type: ItemsTypes.LOAD_FAILURE,
-});
+  type: ItemsTypes.LOAD_FAILURE
+})

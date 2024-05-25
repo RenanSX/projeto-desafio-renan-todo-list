@@ -22,8 +22,13 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "types": ["@testing-library/jest-dom", "vite/client", "cypress", "@testing-library/cypress"],
+    "types": ["@testing-library/jest-dom", "vite/client"],
     "useDefineForClassFields": true
   },
   "include": ["src", "tests", "jest.config.js", "jest-setup.ts"],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

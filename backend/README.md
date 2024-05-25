@@ -34,8 +34,6 @@
 - [Lint Staged](https://github.com/okonet/lint-staged#readme)
 - [Husky](https://typicode.github.io/husky)
 - [Commitlint](https://commitlint.js.org)
-- [Comitizen](https://commitizen-tools.github.io/commitizen)
-- [Release It](https://github.com/release-it/release-it)
 - [Winston](https://github.com/winstonjs/winston)
 - [Docsify](https://docsify.js.org)
 - [Swagger](https://swagger.io)
@@ -75,7 +73,6 @@ Os comandos abaixo serão executados no nível monorepo - em todos os aplicativo
 | format              | Aplica prettier em todo o projeto            |
 | test                | Executa todos os testes do projeto           |
 | clean               | Remove a pasta node_modules,coverage e dist  |
-| release             | Gera uma nova versão do projeto              |
 | update-dependencies | Atualiza as dependências do projeto          |
 | docs:init           | Inicializa a documentação                    |
 | docs:dev            | Inicializa o servidor de documentação        |

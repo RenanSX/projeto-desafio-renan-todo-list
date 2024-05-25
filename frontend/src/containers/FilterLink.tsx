@@ -1,7 +1,7 @@
-import { connect } from 'react-redux';
-import { Dispatch, bindActionCreators } from 'redux';
-import * as filterActions from '../store/actions/filter';
-import { ApplicationState } from '../types';
+import { connect } from 'react-redux'
+import { Dispatch, bindActionCreators } from 'redux'
+import * as filterActions from '../store/actions/filter'
+import { ApplicationState } from '../types'
 
 interface StateProps {
   filterSelected: boolean
@@ -12,36 +12,24 @@ interface DispatchProps {
 }
 
 interface OwnProps {
-  children: string,
+  children: string
   filter: string
 }
 
-type Props = StateProps & DispatchProps & OwnProps;
+type Props = StateProps & DispatchProps & OwnProps
 
-const FilterLink = ({
-  children,
-  updateFilter,
-  filter,
-  filterSelected,
-}: Props) => (
-  <span
-    role="presentation"
-    onClick={() => updateFilter(filter)}
-    className={filterSelected ? 'active' : ''}
-  >
+const FilterLink = ({ children, updateFilter, filter, filterSelected }: Props) => (
+  <span role="presentation" onClick={() => updateFilter(filter)} className={filterSelected ? 'active' : ''}>
     {children}
   </span>
-);
+)
 
 const mapStateToProps = ({ filterState }: ApplicationState, { filter }: OwnProps) => ({
-  filterSelected: filterState === filter,
-});
+  filterSelected: filterState === filter
+})
 
-const mapDispatchToProps = (dispatch: Dispatch) => bindActionCreators(filterActions, dispatch);
+const mapDispatchToProps = (dispatch: Dispatch) => bindActionCreators(filterActions, dispatch)
 
-const ConnectedFilterLink = connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(FilterLink);
+const ConnectedFilterLink = connect(mapStateToProps, mapDispatchToProps)(FilterLink)
 
-export default ConnectedFilterLink;
+export default ConnectedFilterLink

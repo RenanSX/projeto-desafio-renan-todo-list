@@ -23,20 +23,20 @@ export enum VisibilityFilters {
 }
 
 export interface TodoListActionTypes {
-  type: string,
-  payload: Item,
+  type: string
+  payload: Item
   data: Item[]
 }
 
 export interface FilterActionTypes {
-  type: string,
+  type: string
   payload: {
     filter: string
   }
 }
 
 export interface InsertTodoActionTypes {
-  type: string,
+  type: string
   payload: InsertItem
 }
 
@@ -44,15 +44,15 @@ export interface InsertTodoActionTypes {
  * Data types
  */
 export interface Item {
-  uuid: string,
-  title: string,
-  description?: string,
-  editing?: boolean,
+  uuid: string
+  title: string
+  description?: string
+  editing?: boolean
   completed: boolean
 }
 
 export interface InsertItem {
-  title: string,
+  title: string
   description: string
 }
 
@@ -60,7 +60,7 @@ export interface InsertItem {
  * State types
  */
 export interface ApplicationState {
-  items: ItemsState,
+  items: ItemsState
   filterState: string
 }
 

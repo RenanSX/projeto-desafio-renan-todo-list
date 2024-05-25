@@ -7,7 +7,7 @@ $white-color: #fff;
 $text-light-color: #bbb;
 $text-color: #525252;
 
-$fa-font-path: "~font-awesome/fonts";
+$fa-font-path: '~font-awesome/fonts';
 
 * {
   box-sizing: border-box;
@@ -46,7 +46,7 @@ body {
       justify-content: space-between;
       width: 100%;
       background-color: $white-color;
-  
+
       input {
         flex: 1;
         height: 2.5rem;
@@ -109,17 +109,17 @@ body {
           display: flex;
           align-items: center;
         }
-  
+
         .icon {
           margin-left: 1rem;
           color: $primary-base-color;
-           
+
           &:hover {
             cursor: pointer;
             color: $primary-dark-color;
           }
         }
-    
+
         + li {
           border-top: 1px solid $background-color;
         }
@@ -135,7 +135,7 @@ body {
       color: $text-light-color;
 
       .active {
-        color: $text-color
+        color: $text-color;
       }
 
       .filters > * {
@@ -179,7 +179,7 @@ body {
     }
 
     &:hover::before {
-      content: "\f068";
+      content: '\f068';
       color: $white-color;
     }
   }
@@ -189,10 +189,11 @@ body {
   }
 }
 
-.checkbox-item.checked::before, .checkbox-item:hover::before {
-  font-family: "Font Awesome 5 Free";
+.checkbox-item.checked::before,
+.checkbox-item:hover::before {
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  content: "\f00c";
+  content: '\f00c';
   display: flex;
   justify-content: center;
   line-height: 1.2rem;
@@ -214,5 +215,5 @@ body {
 }
 
 .card-wrapper span {
-  color: gray
+  color: gray;
 }

@@ -1,10 +1,10 @@
-import { combineReducers } from 'redux';
-import items from './items';
-import filterState from './filter';
+import { combineReducers } from 'redux'
+import items from './items'
+import filterState from './filter'
 
 const rootReducer = combineReducers({
   items,
-  filterState,
-});
+  filterState
+})
 
-export default rootReducer;
+export default rootReducer
