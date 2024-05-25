@@ -1,0 +1,6 @@
+export * from './create-tasks.route'
+export * from './delete-tasks.route'
+export * from './update-tasks.route'
+export * from './find-tasks.route'
+export * from './list-tasks.route'
+export * from './complete-tasks.route'

@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "allowUmdGlobalAccess": true,
+    "baseUrl": "src",
+    "esModuleInterop": false,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "outDir": "dist",
+    "paths": {
+      "@/*": ["*"]
+    },
+    "resolveJsonModule": true,
+    "rootDirs": ["src", "tests"],
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "types": ["@testing-library/jest-dom", "vite/client", "cypress", "@testing-library/cypress"],
+    "useDefineForClassFields": true
+  },
+  "include": ["src", "tests", "jest.config.js", "jest-setup.ts"],
+}
