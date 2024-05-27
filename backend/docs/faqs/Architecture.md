@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-Este documento mostra como montei a arquitetura para o backend do Todo List. Vou explicar as decisões tomadas, por que foram feitas e como elas ajudam a criar um sistema integrado, eficiente e fácil de escalar.
+Este documento mostra como a arquitetura do projeto TodoList backend foi montada e as decisões por trás de cada uma.
 
 ## Arquitetura do Backend
 

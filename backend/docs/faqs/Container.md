@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-Este documento mostra como organizei e gerenciei os ambientes do backend e frontend do Todo List usando Docker e Docker Compose. Essas ferramentas ajudam a tornar a aplicação mais simples de ajustar, testar e colocar em funcionamento, em qualquer lugar.
+Este documento mostra os ambientes do backend e frontend do Todo List usando Docker e Docker Compose from organizados. Essas ferramentas ajudam a tornar a aplicação mais simples de ajustar, testar e colocar em funcionamento, em qualquer lugar.
 
 ## Por Que Usar Containers?
 

@@ -1,7 +1,8 @@
-import { makeEnsureAuthenticatedMiddleware } from '../factories/middlewares/authenticate.factory'
 import * as TaskSchema from '@/infra/validators/schemas/tasks'
 import * as TasksRoute from '@/main/routes/tasks'
 import { Handler, Request, Response } from '@/presentation/protocols'
+
+import { makeEnsureAuthenticatedMiddleware } from '../factories/middlewares/authenticate.factory'
 
 const createRouteHandler = (handler: Handler) => async (request: Request, reply: Response) => {
   const result = await handler(request)

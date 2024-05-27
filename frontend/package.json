@@ -4,7 +4,7 @@
   "description": "Frontend para o projeto Todo List",
   "scripts": {
     "build": "tsc && vite build",
-    "clean": "rm -rf coverage dist && rm -rf node_modules",
+    "clean": "rm -rf coverage dist && rm -rf node_modules && rm -rf coverage",
     "dev": "vite",
     "format": "prettier --write ./**/*.{js,jsx,ts,tsx}",
     "lint": "eslint . --fix && prettier --write .",
