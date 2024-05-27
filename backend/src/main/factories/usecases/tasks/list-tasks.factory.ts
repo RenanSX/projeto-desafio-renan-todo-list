@@ -1,7 +1,7 @@
-import { ListTasksUsecase } from '@/data/usecases/tasks'
+import { ListTasksUseCase } from '@/data/usecases/tasks'
 import { ListTasksRepository } from '@/infra/database/mysql/repositories/tasks'
 
-export const makeListTasksUsecase = (): ListTasksUsecase => {
+export const makeListTasksUsecase = (): ListTasksUseCase => {
   const listTasksRepository = new ListTasksRepository()
-  return new ListTasksUsecase(listTasksRepository)
+  return new ListTasksUseCase(listTasksRepository)
 }

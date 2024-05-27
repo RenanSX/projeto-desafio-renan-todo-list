@@ -11,7 +11,7 @@ export class DeleteTaskController implements Controller {
       const { id } = request.params as IDeleteTask.Params
       const result = await this.deleteTaskUsecase.deleteTask(id)
 
-      if (result === MESSAGES.TaskNotFound(id)) return notFound(result)
+      if (result === MESSAGES.taskNotFound(id)) return notFound(result)
       return ok(result)
     } catch (error) {
       return serverError(error)

@@ -11,7 +11,7 @@ export class FindTaskController implements Controller {
       const { id } = request.params as IFindTasks.Params
       const result = await this.findTaskUsecase.findTask(id)
 
-      if (result === MESSAGES.TaskNotFound(id)) return notFound(result)
+      if (result === MESSAGES.taskNotFound(id)) return notFound(result)
       return ok(result)
     } catch (error) {
       return serverError(error)

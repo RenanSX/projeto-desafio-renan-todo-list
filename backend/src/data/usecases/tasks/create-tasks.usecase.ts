@@ -7,6 +7,6 @@ export class CreateTaskUseCase implements ICreateTask {
 
   async createTask(data: ICreateTask.Params): Promise<ICreateTask.Result> {
     const insertedId = await this.createTaskRepository.create(data)
-    return MESSAGES.createTaskSuccess(insertedId as string)
+    return MESSAGES.createTaskSuccess(insertedId)
   }
 }

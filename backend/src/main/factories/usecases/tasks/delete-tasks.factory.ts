@@ -1,7 +1,7 @@
-import { DeleteTaskUsecase } from '@/data/usecases/tasks'
+import { DeleteTaskUseCase } from '@/data/usecases/tasks'
 import { DeleteTaskRepository } from '@/infra/database/mysql/repositories/tasks'
 
-export const makeDeleteTaskUsecase = (): DeleteTaskUsecase => {
+export const makeDeleteTaskUsecase = (): DeleteTaskUseCase => {
   const deleteTaskRepository = new DeleteTaskRepository()
-  return new DeleteTaskUsecase(deleteTaskRepository)
+  return new DeleteTaskUseCase(deleteTaskRepository)
 }

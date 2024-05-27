@@ -1,7 +1,7 @@
-import { FindTaskUsecase } from '@/data/usecases/tasks'
+import { FindTaskUseCase } from '@/data/usecases/tasks'
 import { FindTaskRepository } from '@/infra/database/mysql/repositories/tasks'
 
-export const makeFindTaskUsecase = (): FindTaskUsecase => {
+export const makeFindTaskUsecase = (): FindTaskUseCase => {
   const findTaskRepository = new FindTaskRepository()
-  return new FindTaskUsecase(findTaskRepository)
+  return new FindTaskUseCase(findTaskRepository)
 }

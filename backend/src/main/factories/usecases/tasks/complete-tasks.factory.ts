@@ -1,7 +1,7 @@
-import { UpdateTaskUsecase } from '@/data/usecases/tasks'
+import { UpdateTaskUseCase } from '@/data/usecases/tasks'
 import { UpdateTaskRepository } from '@/infra/database/mysql/repositories/tasks'
 
-export const makeCompleteTaskUsecase = (): UpdateTaskUsecase => {
+export const makeCompleteTaskUsecase = (): UpdateTaskUseCase => {
   const updateTaskRepository = new UpdateTaskRepository()
-  return new UpdateTaskUsecase(updateTaskRepository)
+  return new UpdateTaskUseCase(updateTaskRepository)
 }

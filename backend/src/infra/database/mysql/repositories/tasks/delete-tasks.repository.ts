@@ -1,5 +1,5 @@
-import { IDeleteTaskRepository } from '@/data/protocols/database/tasks'
 import Task from '@/data/entity/task.entity'
+import { IDeleteTaskRepository } from '@/data/protocols/database/tasks'
 
 export class DeleteTaskRepository implements IDeleteTaskRepository {
   async delete(id: string): Promise<IDeleteTaskRepository.Result> {

@@ -5,7 +5,7 @@ module.exports = {
   verbose: true,
   setupFiles: ['./tests/setup.js'],
   testPathIgnorePatterns: ['/node_modules/'],
-  modulePathIgnorePatterns: ['<rootDir>/dist/'],
+  modulePathIgnorePatterns: ['<rootDir>/dist/' ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1'
   },

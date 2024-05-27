@@ -12,7 +12,7 @@ export class CompleteTaskController implements Controller {
       const updateData = request.body as IUpdateTask.Params
       const result = await this.updateTaskUsecase.updateTask({ id, ...updateData })
 
-      if (result === MESSAGES.TaskNotFound(id)) return notFound(result)
+      if (result === MESSAGES.taskNotFound(id)) return notFound(result)
       return ok(result)
     } catch (error) {
       return serverError(error)

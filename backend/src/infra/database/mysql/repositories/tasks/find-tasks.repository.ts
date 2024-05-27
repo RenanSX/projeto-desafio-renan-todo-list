@@ -1,5 +1,5 @@
-import { IFindTaskRepository } from '@/data/protocols/database/tasks'
 import Task from '@/data/entity/task.entity'
+import { IFindTaskRepository } from '@/data/protocols/database/tasks'
 
 export class FindTaskRepository implements IFindTaskRepository {
   async find(id: string): Promise<IFindTaskRepository.Result> {
