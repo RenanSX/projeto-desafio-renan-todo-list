@@ -1,30 +1,77 @@
-# React + TypeScript + Vite
+# Projeto Desafio Renan - Todo List Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição
 
-Currently, two official plugins are available:
+**desafio-renan-todo-list-front** O front do "desafio-renan-todo-list" é responsável por gerenciar as tarefas de um usuário, permitindo operações como listagem, detalhamento, criação, atualização e remoção de tarefas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🍂 Pilha de tecnologia
 
-## Expanding the ESLint configuration
+- [TypeScript](https://www.typescriptlang.org)
+- [React](https://reactjs.org)
+- [Redux Toolkit](https://redux-toolkit.js.org)
+- [Redux Saga](https://redux-saga.js.org/)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
+- [Sass](https://sass-lang.com/)
+- [Jest](https://jestjs.io)
+- [ESLint](https://eslint.org)
+- [Prettier](https://prettier.io)
+- [Lint Staged](https://github.com/okonet/lint-staged#readme)
+- [Husky](https://typicode.github.io/husky)
+- [Commitlint](https://commitlint.js.org)
+- [Comitizen](https://commitizen-tools.github.io/commitizen)
+- [Vite](https://vitejs.dev)
+- [Docsify](https://docsify.js.org)
+- [Github Actions](https://docs.github.com/pt/actions)
+- [Docker](https://www.docker.com)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Documentações
 
-- Configure the top-level `parserOptions` property like this:
+**Gerando um Servidor de Documentação com Docsify**
+Para visualizar a documentação no Docsify:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname
-  }
-}
-```
+- Se ainda não inicializou a documentação, execute `npm run docs:init` para preparar a pasta `docs`.
+- Em seguida, execute `npm run docs:serve` para levantar um servidor local na porta `7000`.
+- Acesse `http://localhost:7000` no navegador, você deverá ver uma interface amigável para navegar entre os documentos README.md do projeto.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 🎯 Comandos
+
+Os comandos abaixo serão executados no nível monorepo - em todos os aplicativos e pacotes onde existe o script npm.
+
+| Comando             | Descrição                                    |
+| ------------------- | -------------------------------------------- |
+| build               | Gera a versão de produção do projeto         |
+| dev                 | Inicializa o projeto em modo desenvolvimento |
+| start               | Inicializa o projeto em modo produção        |
+| lint                | Aplica lint em todo o projeto                |
+| format              | Aplica prettier em todo o projeto            |
+| test                | Executa todos os testes do projeto           |
+| clean               | Remove a pasta node_modules,coverage e dist  |
+| update-dependencies | Atualiza as dependências do projeto          |
+| docs:init           | Inicializa a documentação                    |
+| docs:serve          | Inicializa o servidor de documentação        |
+
+## Sobre o projeto:
+
+### Estrutura
+
+- [`components`](./src/components) - Agrupa componentes React de acordo com o Atomic Design, divididos em átomos, moléculas, organismos,
+- [`containers`](./src/containers) - Agrupa conteiners no codigo afim de aumentar eficiëncia, escalabilidade e modularidade.
+- [`services`](./src/services) - Agrupa serviços para comunicação com APIs externas e outras operações de IO.
+- [`store`](./src/store) - Configura e gerencia o estado global com Redux Toolkit, facilitando o gerenciamento de estado em lugares mais complexos. Contém funções e esquemas para validação de formulários com Yup, permitindo validar dados de entrada sem poluir os componentes.
+
+### Documentações
+
+O projeto é documentado usando:
+
+- [Docsify](https://docsify.js.org/)
+
+## Rodando o projeto
+
+- Instale as dependências do projeto executando o comando
+  `npm install`
+- Para Inicializar o projeto execute o comando
+  `npm run dev`
+- Para executar os testes, execute o comando
+  `npm run test`
+- Para aplicar lint no projeto, execute o comando
+  `npm run lint`

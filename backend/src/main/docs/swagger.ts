@@ -12,21 +12,17 @@ export default {
     },
     servers: [
       {
-        url: 'http://localhost:5000',
+        url: 'http://localhost:3333',
         description: 'Development'
-      },
-      {
-        url: 'https://desafio-renan-todo-list.herokuapp.com',
-        description: 'Production'
       }
     ],
     paths: {
       '/tasks': {
         post: {
           tags: ['Tasks'],
-          summary: 'create taks',
-          description: 'Permite a criação de uma nova feature flag.',
-          operationId: 'createtaks',
+          summary: 'Criar tarefa',
+          description: 'Permite a criação de uma nova tarefa.',
+          operationId: 'create-task',
           parameters: [],
           requestBody: {
             description: '',
@@ -35,21 +31,19 @@ export default {
                 schema: {
                   allOf: [
                     {
-                      $ref: '#/components/schemas/create-taskrequest'
+                      $ref: '#/components/schemas/create-task-request'
                     },
                     {
                       example: {
-                        name: 'Promoção de natal',
-                        description: 'Habilita a promoção de natal do Grupo Boticário',
-                        state: true
+                        title: 'Fazer compras',
+                        description: 'Fazer compras de inicio de mês no supermercado.'
                       }
                     }
                   ]
                 },
                 example: {
-                  name: 'Promoção de natal',
-                  description: 'Habilita a promoção de natal do Grupo Boticário',
-                  state: true
+                  name: 'Fazer compras',
+                  description: 'Fazer compras de inicio de mês no supermercado.'
                 }
               }
             },
@@ -64,15 +58,15 @@ export default {
           deprecated: false,
           security: [
             {
-              bearerAuth: []
+              basicAuth: []
             }
           ]
         },
         get: {
           tags: ['Tasks'],
-          summary: 'list feature-flags',
+          summary: 'Listar tarefas',
           description: 'Lista todas as Tasks disponíveis.',
-          operationId: 'listfeature-flags',
+          operationId: 'list-tasks',
           parameters: [],
           responses: {
             '200': {
@@ -83,7 +77,7 @@ export default {
           deprecated: false,
           security: [
             {
-              bearerAuth: []
+              basicAuth: []
             }
           ]
         }
@@ -91,9 +85,9 @@ export default {
       '/tasks/{TaskId}': {
         get: {
           tags: ['Tasks'],
-          summary: 'find feature-flags',
-          description: 'Busca detalhes de uma feature flag específica pelo ID.',
-          operationId: 'findfeature-flags',
+          summary: 'Encontrar tarefa',
+          description: 'Busca detalhes de uma tarefa específica pelo ID.',
+          operationId: 'find-tasks',
           parameters: [
             {
               name: 'TaskId',
@@ -113,15 +107,15 @@ export default {
           deprecated: false,
           security: [
             {
-              bearerAuth: []
+              basicAuth: []
             }
           ]
         },
         delete: {
           tags: ['Tasks'],
-          summary: 'delete feature-flags',
-          description: 'Remove uma feature flag específica pelo ID.',
-          operationId: 'deletefeature-flags',
+          summary: 'Excluir tarefa',
+          description: 'Remove uma tarefa específica pelo ID.',
+          operationId: 'delete-tasks',
           parameters: [
             {
               name: 'TaskId',
@@ -141,15 +135,15 @@ export default {
           deprecated: false,
           security: [
             {
-              bearerAuth: []
+              basicAuth: []
             }
           ]
         },
         patch: {
           tags: ['Tasks'],
-          summary: 'update feature-flags',
-          description: 'Atualiza uma feature flag existente pelo ID.',
-          operationId: 'update-flags',
+          summary: 'Atualizar tarefa',
+          description: 'Atualiza uma tarefa específica pelo ID.',
+          operationId: 'update-tasks',
           parameters: [
             {
               name: 'TaskId',
@@ -166,7 +160,7 @@ export default {
               'application/json': {
                 schema: {
                   allOf: [
-                    { $ref: '#/components/schemas/update-taskrequest' },
+                    { $ref: '#/components/schemas/update-task-request' },
                     {
                       example: {
                         state: false
@@ -190,7 +184,58 @@ export default {
           deprecated: false,
           security: [
             {
-              bearerAuth: []
+              basicAuth: []
+            }
+          ]
+        }
+      },
+      'task/{TaskId}/complete': {
+        post: {
+          tags: ['Tasks'],
+          summary: 'Completar tarefa',
+          description: 'Marca uma tarefa como concluída pelo ID',
+          operationId: 'complete-tasks',
+          parameters: [
+            {
+              name: 'TaskId',
+              in: 'path',
+              required: true,
+              schema: {
+                type: 'string'
+              }
+            }
+          ],
+          requestBody: {
+            description: '',
+            content: {
+              'application/json': {
+                schema: {
+                  allOf: [
+                    { $ref: '#/components/schemas/complete-task-request' },
+                    {
+                      example: {
+                        state: false
+                      }
+                    }
+                  ]
+                },
+                example: {
+                  state: false
+                }
+              }
+            },
+            required: true
+          },
+          responses: {
+            '200': {
+              description: '',
+              headers: {}
+            }
+          },
+          deprecated: false,
+          security: [
+            {
+              basicAuth: []
             }
           ]
         }
@@ -198,14 +243,14 @@ export default {
     },
     components: {
       securitySchemes: {
-        bearerAuth: {
+        basicAuth: {
           type: 'http',
-          scheme: 'bearer'
+          scheme: 'basic'
         }
       },
       schemas: {
-        'create-taskrequest': {
-          title: 'create-taskrequest',
+        'create-task-request': {
+          title: 'create-task-request',
           required: ['title', 'description'],
           type: 'object',
           properties: {
@@ -221,8 +266,8 @@ export default {
             description: 'Fazer as compras do mês no supermercado'
           }
         },
-        'update-taskrequest': {
-          title: 'update-taskrequest',
+        'update-task-request': {
+          title: 'update-task-request',
           type: 'object',
           properties: {
             title: {
@@ -243,6 +288,18 @@ export default {
             description: 'Fazer bolo para eniversário do meu primo.',
             completed: true,
             editing: true
+          }
+        },
+        'complete-task-request': {
+          title: 'complete-task-request',
+          type: 'object',
+          properties: {
+            completed: {
+              type: 'boolean'
+            }
+          },
+          example: {
+            completed: true
           }
         }
       }

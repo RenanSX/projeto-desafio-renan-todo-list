@@ -10,7 +10,7 @@ A arquitetura do backend foi cuidadosamente escolhida para atender às especific
 
 ### Clean Architecture
 
-- **Escolha Arquitetural:** Escolhi a Clean Architecture para organizar o backend do projeto. Essa abordagem ajuda a manter uma separação clara entre o núcleo do negócio e as interfaces de usuário, além de frameworks e bancos de dados. Isso torna o sistema mais fácil de testar e menos dependente de tecnologias específicas.
+- **Escolha Arquitetural:** Essa abordagem ajuda a manter uma separação clara entre o núcleo do negócio e as interfaces de usuário, além de frameworks e bancos de dados. Isso torna o sistema mais fácil de testar e menos dependente de tecnologias específicas.
 
 - **Organização em Camadas:** Separei a aplicação em várias camadas, como Apresentação, Aplicação, Domínio e Infraestrutura, com cada uma tendo suas próprias tarefas definidas.
 

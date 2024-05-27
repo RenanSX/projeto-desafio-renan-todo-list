@@ -1,12 +1,12 @@
 # Contributing
 
-1. [Fork it](https://github.com/lucioerlan/Flag-SecOps-Hub/tree/main/frontend)
+1. [Fork it](https://github.com/RenanSX/desafio-renan-todo-list/tree/main/frontend)
 2. Install dependencies (`npm install`)
 3. Create your feature branch (`git checkout -b my-new-feature`)
 4. Commit your changes (`git commit -am 'feat: added some feature'`)
 5. Test your changes (`npm test`)
 6. Push to the branch (`git push origin my-new-feature`)
-7. [Create new Pull Request](https://github.com/lucioerlan/Flag-SecOps-Hub/tree/main/frontend/pulls)
+7. [Create new Pull Request](https://github.com/RenanSX/desafio-renan-todo-list/tree/main/frontend/pulls)
 
 ## Testing
 

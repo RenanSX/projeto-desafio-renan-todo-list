@@ -1,15 +1,13 @@
 ## Bem-vindo ao Backend do Todo List - Documentação
 
-Bem-vindo à documentação central do **backend** do Todo List! Esta documentação fornece uma visão detalhada da infraestrutura, configurações, práticas de segurança e outros aspectos técnicos do projeto. Navegue pelos links abaixo para acessar a documentação de cada área do projeto.
+Bem-vindo à documentação central do **backend** do Todo List! Esta documentação fornece uma visão detalhada da infraestrutura, configurações e demais aspectos técnicos do projeto. Navegue pelos links abaixo para acessar a documentação de cada área do projeto.
 
 ## Menu de Documentação
 
 - [Architecture.md](./faqs/Architecture.md) - Descreve a arquitetura geral do backend, incluindo padrões arquiteturais e decisões técnicas.
-- [Cloud-Provider.md](./faqs/Cloud-Provider.md) - Documenta a escolha do provedor de nuvem, serviços utilizados e configurações relevantes.
 - [Container.md](./faqs/Container.md) - Detalha a implementação de containers usando Docker, Docker Compose e estratégias de provisionamento.
 - [Database.md](./faqs/Database.md) - Detalha o banco de dados utilizado, mysql.
 - [Packages.md](./faqs/Packages.md) - Lista e justifica todas as dependências e pacotes utilizados no backend.
-- [Patterns.md](./faqs/Patterns.md) - Descreve os padrões de design e desenvolvimento adotados no backend.
 - [Structure.md](./faqs/Structure.md) - Fornece uma visão da estrutura de diretórios e organização de código no backend.
 - [Tests.md](./faqs/Tests.md) - Explica as estratégias e ferramentas de teste implementadas para garantir a qualidade do backend.
 
