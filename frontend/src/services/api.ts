@@ -1,9 +1,9 @@
 import axios, { AxiosRequestHeaders } from 'axios'
 import { Buffer } from 'buffer'
 
-const URL_BACKEND = process.env.REACT_APP_URL_BACKEND;
-const AUTH_USER = process.env.REACT_APP_AUTH_USER;
-const AUTH_PASS = process.env.REACT_APP_AUTH_PASS;
+const URL_BACKEND = process.env.REACT_APP_URL_BACKEND
+const AUTH_USER = process.env.REACT_APP_AUTH_USER
+const AUTH_PASS = process.env.REACT_APP_AUTH_PASS
 
 console.log('URL_BACKEND', URL_BACKEND)
 

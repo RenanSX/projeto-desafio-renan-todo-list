@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators, Dispatch } from 'redux'
 import * as itemsActions from '@/store/actions/items'
 import { ApplicationState, Item, VisibilityFilters } from '@/types'
-import { Header, TodoFilters, TodoForm, TodoItem, TodoMessage }from '@/components'
+import { Header, TodoFilters, TodoForm, TodoItem, TodoMessage } from '@/components'
 
 interface StateProps {
   items: Item[]
