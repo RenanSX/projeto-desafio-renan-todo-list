@@ -1,4 +1,3 @@
-import React from 'react'
 import { VisibilityFilters } from '@/types'
 import { EmptyMessage, TodoFilters } from '@/components'
 

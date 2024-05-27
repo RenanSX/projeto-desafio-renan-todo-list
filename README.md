@@ -22,8 +22,10 @@
 ### Docker Compose
 
 1. Certifique-se de ter Docker e Docker Compose.
-2. Execute `docker-compose up` na raiz do projeto.
+2. Execute `docker-compose up -d` na raiz do projeto.
 3. O frontend vai estar disponivel em `http://localhost:3000` e o backend em `http://localhost:3333`. Isso vai subir tanto o backend quanto o frontend em containers Docker.
+
+Observações: Lembre de deixar as portas `3000` e `3333` liberados no seu computador.
 
 ### Makefile
 
@@ -40,11 +42,13 @@ Cada parte do projeto (Backend e Frontend) possui documentação específica det
 #### Backend
 
 - **Documentação Interativa Swagger**: Acesse em `http://localhost:3333/documentation` após iniciar o projeto.
-- **Docsify**: Para uma visão mais detalhada, a documentação completa está disponível em [Docsify backend](./backend/docs/README.md). Execute `npm run docs:serve` na raiz do backend para iniciar o servidor de documentação Docsify então basta acessar `http://localhost:7000`.
+- **Docsify**: Para uma visão mais detalhada, a documentação completa está disponível em [Docsify backend](./backend/docs/README.md).
+  Execute `npm run docs:serve` na raiz do backend para iniciar o servidor de documentação Docsify então basta acessar `http://localhost:7000`.
 
 #### Frontend
 
-- **Docsify**: Para uma visão mais detalhada, a documentação completa está disponível em [Docsify frontend](./frontend/docs/README.md). Execute `npm run docs:serve` na raiz do frontend para iniciar o servidor de documentação Docsify então basta acessar `http://localhost:8000`.
+- **Docsify**: Para uma visão mais detalhada, a documentação completa está disponível em [Docsify frontend](./frontend/docs/README.md).
+  Execute `npm run docs:serve` na raiz do frontend para iniciar o servidor de documentação Docsify então basta acessar `http://localhost:8000`.
 
 ## Comandos Comuns
 

@@ -10,9 +10,16 @@ export default ({ mode }) => {
       'process.env': env
     },
     plugins: [react(), viteTsconfigPaths()],
+    base: '/',
+    preview: {
+      port: 3000,
+      strictPort: true
+    },
     server: {
-      open: true,
-      port: 3000
+      port: 3000,
+      strictPort: true,
+      host: true,
+      origin: 'http://0.0.0.0:3000'
     },
     resolve: {
       alias: {

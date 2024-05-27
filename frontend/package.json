@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc && vite build",
     "clean": "rm -rf coverage dist && rm -rf node_modules && rm -rf coverage",
-    "dev": "vite",
+    "dev": "vite --no-open",
     "format": "prettier --write ./**/*.{js,jsx,ts,tsx}",
     "lint": "eslint . --fix && prettier --write .",
     "lint-staged-husky": "lint-staged",

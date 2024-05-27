@@ -1,0 +1,54 @@
+version: "3.8"
+
+services:
+  todo_list_backend:
+    container_name: todo_list_backend
+    build:
+      dockerfile: ./dockerfiles/Dockerfile.backend
+      context: ./backend
+    ports:
+      - "3333:3333"
+    volumes:
+      - backend_node_modules:/app/node_modules
+      - ./backend:/app
+    environment:
+      NODE_ENV: production
+      LOG_LEVEL: debug
+      DB_HOST: db-desafio-renan.c940ci240730.us-east-1.rds.amazonaws.com
+      DB_USERNAME: admin
+      DB_PASSWORD: yH865687a2RQ
+      DB_PORT: 3306
+      DB_NAME: task_db
+      PORT: 3333
+      AUTH_USERNAME: admin
+      AUTH_PASSWORD: c884h524YTMN
+      CORS_ORIGIN: "*"
+    restart: on-failure
+    networks:
+      - todo_list_network
+
+  todo_list_frontend:
+    container_name: todo_list_frontend
+    build:
+      dockerfile: ./dockerfiles/Dockerfile.frontend
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - frontend_node_modules:/app/node_modules
+      - ./frontend:/app
+    environment:
+      NODE_ENV: production
+      REACT_APP_URL_BACKEND: todo_list_backend:3333
+      REACT_APP_AUTH_USER: admin
+      REACT_APP_AUTH_PASS: c884h524YTMN
+    restart: on-failure
+    networks:
+      - todo_list_network
+
+volumes:
+  backend_node_modules:
+  frontend_node_modules:
+
+networks:
+  todo_list_network:

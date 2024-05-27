@@ -163,13 +163,15 @@ export default {
                     { $ref: '#/components/schemas/update-task-request' },
                     {
                       example: {
-                        state: false
+                        title: 'Fazer compras no shopping',
+                        description: 'Fazer compras no shooping mais próximo da minha casa no próximo final de semana.'
                       }
                     }
                   ]
                 },
                 example: {
-                  state: false
+                  title: 'Fazer compras no shopping',
+                  description: 'Fazer compras no shooping mais próximo da minha casa no próximo final de semana.'
                 }
               }
             },
@@ -214,13 +216,13 @@ export default {
                     { $ref: '#/components/schemas/complete-task-request' },
                     {
                       example: {
-                        state: false
+                        completed: true
                       }
                     }
                   ]
                 },
                 example: {
-                  state: false
+                  completed: true
                 }
               }
             },
