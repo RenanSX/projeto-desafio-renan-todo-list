@@ -1,0 +1,57 @@
+name: CI Frontend
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - "feature/**"
+      - "fix/**"
+      - "release/**"
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Read .nvmrc
+        run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Cache node_modules
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: ./node_modules
+          key: node_modules-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            node_modules-
+
+      - name: Install Dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: Run Linter
+        run: npm run lint
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Build
+        run: npm run build

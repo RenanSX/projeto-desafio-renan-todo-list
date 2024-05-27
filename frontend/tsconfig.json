@@ -22,7 +22,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "types": ["@testing-library/jest-dom", "vite/client"],
+    "types": ["@testing-library/jest-dom", "vite/client", "node"],
     "useDefineForClassFields": true
   },
   "include": ["src", "tests", "jest.config.js", "jest-setup.ts"],

@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react'
-import { Item } from '../types'
+import { Item } from '@/types'
 
 interface TodoItemProps {
   item: Item

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import items from './items'
-import filterState from './filter'
+import items from '@/store/reducers/items'
+import filterState from '@/store/reducers/filter'
 
 const rootReducer = combineReducers({
   items,

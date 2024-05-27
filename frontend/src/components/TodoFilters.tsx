@@ -1,5 +1,5 @@
-import FilterLink from '../containers/FilterLink'
-import { VisibilityFilters } from '../types'
+import FilterLink from '@/containers/FilterLink'
+import { VisibilityFilters } from '@/types'
 
 interface CounterProps {
   taskCounter: {

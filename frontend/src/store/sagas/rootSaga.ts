@@ -1,6 +1,13 @@
 import { all, takeLatest } from 'redux-saga/effects'
-import { ItemsTypes } from '../../types'
-import { deleteRequest, loadRequest, insertRequest, markCompleteRequest, findByIdRequest, updateRequest } from './sagas'
+import { ItemsTypes } from '@/types'
+import {
+  deleteRequest,
+  loadRequest,
+  insertRequest,
+  markCompleteRequest,
+  findByIdRequest,
+  updateRequest
+} from '@/store/sagas/sagas'
 
 export default function* rootSaga(): Generator {
   return yield all([

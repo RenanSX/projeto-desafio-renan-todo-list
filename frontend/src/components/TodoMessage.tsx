@@ -1,7 +1,6 @@
 import React from 'react'
-import { VisibilityFilters } from '../types'
-import EmptyMessage from './EmptyMessage'
-import TodoFilters from './TodoFilters'
+import { VisibilityFilters } from '@/types'
+import { EmptyMessage, TodoFilters } from '@/components'
 
 interface MessageProps {
   filterState: string

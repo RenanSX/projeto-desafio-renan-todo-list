@@ -1,4 +1,4 @@
-import { Item, ItemsTypes } from '../../types'
+import { Item, ItemsTypes } from '@/types'
 
 export const addItem = (title: string, description: string) => ({
   type: ItemsTypes.ADD_ITEM,

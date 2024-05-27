@@ -1,4 +1,4 @@
-import { ItemsState, ItemsTypes, TodoListActionTypes } from '../../types'
+import { ItemsState, ItemsTypes, TodoListActionTypes } from '@/types'
 
 const initialState: ItemsState = {
   data: []
