@@ -1,8 +1,8 @@
-# Padrões de Design no Projeto Todo List
+# Padrões de Design no Projeto Task List
 
 ## Visão Geral
 
-Este texto descreve os padrões de design que adotei no Todo List. Ele detalha como cada padrão é aplicado e contribui para a arquitetura do projeto, assegurando uma base de código firme, adaptável e de fácil manutenção.
+Este texto descreve os padrões de design que adotei no Task List. Ele detalha como cada padrão é aplicado e contribui para a arquitetura do projeto, assegurando uma base de código firme, adaptável e de fácil manutenção.
 
 ## Padrões Implementados no Projeto
 
@@ -13,4 +13,4 @@ Este texto descreve os padrões de design que adotei no Todo List. Ele detalha c
 
 ## Conclusão
 
-Os padrões de design que implementei no Todo List são essenciais para manter uma base de código organizada.
+Os padrões de design que implementei no Task List são essenciais para manter uma base de código organizada.

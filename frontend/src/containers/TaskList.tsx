@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators, Dispatch } from 'redux'
 import * as itemsActions from '@/store/actions/items'
 import { ApplicationState, Item, VisibilityFilters } from '@/types'
-import { Header, TodoFilters, TodoForm, TodoItem, TodoMessage } from '@/components'
+import { Header, TaskFilters, TaskForm, TaskItem, TaskMessage } from '@/components'
 
 interface StateProps {
   items: Item[]
@@ -21,7 +21,7 @@ interface DispatchProps {
 
 type Props = StateProps & DispatchProps
 
-const TodoList = ({
+const TaskList = ({
   items,
   addItem,
   toggleItem,
@@ -51,15 +51,15 @@ const TodoList = ({
       <Header title="Lista de tarefas" />
 
       <div className="content">
-        <TodoForm emptyList={!items.length} addItem={addItem} />
+        <TaskForm emptyList={!items.length} addItem={addItem} />
 
         {items.length === 0 ? (
-          <TodoMessage filterState={filterState} getTaskCounter={getTaskCounter} />
+          <TaskMessage filterState={filterState} getTaskCounter={getTaskCounter} />
         ) : (
           <>
             <ul className="items">
               {items.map((item) => (
-                <TodoItem
+                <TaskItem
                   key={item.uuid}
                   item={item}
                   toggleItem={toggleItem}
@@ -70,7 +70,7 @@ const TodoList = ({
               ))}
             </ul>
 
-            <TodoFilters taskCounter={getTaskCounter()} />
+            <TaskFilters taskCounter={getTaskCounter()} />
           </>
         )}
       </div>
@@ -96,6 +96,6 @@ const mapStateToProps = (state: ApplicationState) => ({
 
 const mapDispatchToProps = (dispatch: Dispatch) => bindActionCreators(itemsActions, dispatch)
 
-const ConnectedTodoList = connect(mapStateToProps, mapDispatchToProps)(TodoList)
+const ConnectedTaskList = connect(mapStateToProps, mapDispatchToProps)(TaskList)
 
-export default ConnectedTodoList
+export default ConnectedTaskList

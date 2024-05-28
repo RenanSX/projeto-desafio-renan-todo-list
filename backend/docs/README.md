@@ -1,6 +1,6 @@
-## Bem-vindo ao Backend do Todo List - Documentação
+## Bem-vindo ao Backend do Task List - Documentação
 
-Bem-vindo à documentação central do **backend** do Todo List! Esta documentação fornece uma visão detalhada da infraestrutura, configurações e demais aspectos técnicos do projeto. Navegue pelos links abaixo para acessar a documentação de cada área do projeto.
+Bem-vindo à documentação central do **backend** do Task List! Esta documentação fornece uma visão detalhada da infraestrutura, configurações e demais aspectos técnicos do projeto. Navegue pelos links abaixo para acessar a documentação de cada área do projeto.
 
 ## Menu de Documentação
 

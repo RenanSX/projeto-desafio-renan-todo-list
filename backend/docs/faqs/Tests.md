@@ -1,46 +1,34 @@
-# Estratégia e Implementação dos Testes no Backend do Todo List
+# Contributing
 
-## Visão Geral
+1. [Fork it](https://github.com/RenanSX/desafio-renan-task-list/tree/main/frontend)
+2. Install dependencies (`npm install`)
+3. Create your feature branch (`git checkout -b my-new-feature`)
+4. Commit your changes (`git commit -am 'feat: added some feature'`)
+5. Test your changes (`npm test`)
+6. Push to the branch (`git push origin my-new-feature`)
+7. [Create new Pull Request](https://github.com/RenanSX/desafio-renan-task-list/tree/main/frontend/pulls)
 
-Este texto detalha a estratégia e a execução dos testes que fiz no backend do Todo List. Como desenvolvedor, entendo que testar é essencial para assegurar a qualidade, estabilidade e confiança no sistema. Aqui, explico como usei testes unitários para checar a lógica e as funcionalidades do projeto, com o objetivo de fazer o código não só atender as expectativas do negócio.
+## Testing
 
-## Estratégia de Testes
+We use [Jest](https://github.com/facebook/jest) to write tests. Run our test suite with this command:
 
-### Ferramenta Utilizada: Jest
+```
+npm test
+```
 
-Escolhi o Jest por ser eficiente e simples de usar. Ele oferece um ambiente completo para testes, suportando mocks, stubs, spys, e outros recursos úteis.
+## Code Style
 
-### Testes Unitários
+We use [Prettier](https://prettier.io/) and tslint to maintain code style and best practices.
+Please make sure your PR adheres to the guides by running:
 
-- **Implementação:** Fiz testes unitários que se concentram em partes menores do sistema, como funções ou métodos individuais. Cada teste é independente e busca verificar se uma parte específica funciona como deve.
-- **Padrão Triple-A:** Usei o padrão Arrange-Act-Assert para estruturar os testes. Primeiro, arrumo o ambiente necessário (Arrange), executo a unidade que está sendo testada (Act) e depois confiro se o resultado é o esperado (Assert).
-- **Mocking e Stubs:** Empreguei mocks e stubs para simular dependências externas, focando os testes na lógica em questão e evitando interferências de elementos externos.
+```
+npm run lint
+```
 
-### Foco dos Testes
+## Commit Messages
 
-- **Regras de Negócio:** Me concentrei em testar funções críticas para as regras de negócio e manipulação de dados, assegurando seu funcionamento correto em várias situações.
-- **Validações:** Testei funções que validam entradas ou formatam saídas para garantir que rejeitem dados ruins e organizem os dados corretamente.
-- **Integrações Importantes:** Além da lógica interna, chequei como as partes se conectam a serviços essenciais, usando mocks para essas integrações externas.
+We use [Commitlint](https://commitlint.js.org/#/) to ensure that our commit messages are consistent and follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/) specification.
 
-### Importância dos Testes Unitários
-
-Os testes unitários são cruciais não só para checar o sistema, mas como uma parte ativa do desenvolvimento. Eles aumentam a segurança nas mudanças, ajudam a encontrar erros cedo e servem como uma descrição viva do comportamento esperado do sistema.
-
-![jest](../images/jest.png)
-
-## Integração com Swagger para Documentação da API
-
-### Swagger-UI
-
-Implementei o Swagger-UI para criar uma documentação interativa da API.
-
-### Vantagens da Integração com Swagger
-
-- **Visualização Intuitiva:** O Swagger mostra endpoints, parâmetros e modelos de dados de forma clara e organizada.
-- **Interatividade:** Permite testar os endpoints diretamente na interface, ajudando a validar as funcionalidades rapidamente.
-
-  ![swagger](../images/swagger.png)
-
-  ## Conclusão
-
-A estratégia de testes e a integração com ferramentas como Jest e Swagger fortalecem o desenvolvimento e a manutenção do Todo List.
+```
+npm run commit
+```

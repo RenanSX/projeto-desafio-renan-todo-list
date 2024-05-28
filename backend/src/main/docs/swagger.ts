@@ -1,14 +1,14 @@
 export default {
   openapi: {
     info: {
-      title: 'Desafio Backend Renan Todo List',
+      title: 'Desafio Backend Renan Task List',
       contact: {
         name: 'Github',
-        url: 'https://github.com/RenanSX/desafio-renan-todo-list'
+        url: 'https://github.com/RenanSX/desafio-renan-task-list'
       },
       version: '1.0',
       description:
-        'O backend do <b>"Todo List"</b> é responsável por gerenciar as tarefas de um usuário, permitindo operações como listagem, detalhamento, criação, atualização e remoção de tarefas.'
+        'O backend do <b>"Task List"</b> é responsável por gerenciar as tarefas de um usuário, permitindo operações como listagem, detalhamento, criação, atualização e remoção de tarefas.'
     },
     servers: [
       {

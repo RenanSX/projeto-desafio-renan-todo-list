@@ -1,8 +1,8 @@
-# Projeto Desafio Renan - Todo List Backend e Frontend
+# Projeto Desafio Renan - Task List Backend e Frontend
 
 ## Visão Geral do Projeto
 
-- **Objetivo**: O Projeto Todo List é um projeto que consiste em dois ambientes Frontend e backend que serão responsáveis por Gerenciar tarefas de um usuário, permitindo que um usuário crie, atualize, liste e até complete suas tarefas diárias.
+- **Objetivo**: O Projeto Task List é um projeto que consiste em dois ambientes Frontend e backend que serão responsáveis por Gerenciar tarefas de um usuário, permitindo que um usuário crie, atualize, liste e até complete suas tarefas diárias.
 - **Estrutura**: Composto por Backend e Frontend, integrando-se para fornecer uma solução completa.
 
 ## Arquitetura e Tecnologias
@@ -41,7 +41,7 @@ Execute o seguinte passo a passo
 - Instale as depêndencias `npm install`
 - Crie o arquivo env `cp .env.example .env`, cole os valores das variáveis
 - Rode o projeto `npm run dev`
-- Importe a Collection (Desafio Renan TodoList Backend - Collection.postman_collection.json) do postman que se encontra na pasta [`postman`](./backend/docs/postman/)
+- Importe a Collection (Desafio Renan TaskList Backend - Collection.postman_collection.json) do postman que se encontra na pasta [`postman`](./backend/docs/postman/)
 - Execute o projeto através da url `http://localhost:3333`
 
 ## Frontend
@@ -73,8 +73,8 @@ Cada parte do projeto (Backend e Frontend) possui documentação específica det
 
 - `npm install`: Instala as dependências do projeto.
 - `npm run dev`: Inicializa o projeto em modo de desenvolvimento.
-- `npm run test`: Executa todos os testes do projeto.
-- `npm run lint`: Aplica linting em todo o projeto.
+- `npm run test`: Executa os testes do projeto.
+- `npm run lint`: Aplica linting no projeto inteiro.
 
 ## Testes
 

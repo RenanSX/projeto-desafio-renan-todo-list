@@ -52,7 +52,7 @@ export const loadFailure = () => ({
   type: ItemsTypes.LOAD_FAILURE
 })
 
-export const insertTodoSuccess = (data: Item) => ({
+export const insertTaskSuccess = (data: Item) => ({
   type: ItemsTypes.INSERT_SUCCESS,
   payload: data,
 });

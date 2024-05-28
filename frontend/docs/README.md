@@ -1,6 +1,6 @@
-## Bem-vindo ao Frontend do Todo List - Documentação
+## Bem-vindo ao Frontend do Task List - Documentação
 
-Bem-vindo à documentação central do **frontend** do Todo List! Esta documentação fornece uma visão detalhada da interface do usuário, arquitetura, design, testes e outros aspectos técnicos do projeto. Navegue pelos links abaixo para acessar a documentação de cada área do projeto.
+Bem-vindo à documentação central do **frontend** do Task List! Esta documentação fornece uma visão detalhada da interface do usuário, arquitetura, design, testes e outros aspectos técnicos do projeto. Navegue pelos links abaixo para acessar a documentação de cada área do projeto.
 
 ## Menu de Documentação
 

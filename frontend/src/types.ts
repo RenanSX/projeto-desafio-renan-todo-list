@@ -23,7 +23,7 @@ export enum VisibilityFilters {
   UPDATE_FILTER = 'UPDATE_FILTER'
 }
 
-export interface TodoListActionTypes {
+export interface TaskListActionTypes {
   type: string
   payload: Item
   data: Item[]
@@ -36,7 +36,7 @@ export interface FilterActionTypes {
   }
 }
 
-export interface InsertTodoActionTypes {
+export interface InsertTaskActionTypes {
   type: string
   payload: InsertItem
 }

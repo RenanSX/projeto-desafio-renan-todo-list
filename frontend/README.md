@@ -1,8 +1,8 @@
-# Projeto Desafio Renan - Todo List Frontend
+# Projeto Desafio Renan - Task List Frontend
 
 ## Descrição
 
-**desafio-renan-todo-list-front** O front do "desafio-renan-todo-list" é responsável por gerenciar as tarefas de um usuário, permitindo operações como listagem, detalhamento, criação, atualização e remoção de tarefas.
+**desafio-renan-task-list-front** O front do "desafio-renan-task-list" é responsável por gerenciar as tarefas de um usuário, permitindo operações como listagem, detalhamento, criação, atualização e remoção de tarefas.
 
 ## 🍂 Pilha de tecnologia
 
@@ -35,16 +35,16 @@ Para visualizar a documentação no Docsify:
 
 ## 🎯 Comandos
 
-Os comandos abaixo serão executados no nível monorepo - em todos os aplicativos e pacotes onde existe o script npm.
+Os comandos abaixo serão executados no nível monorepo - nos aplicativos e pacotes onde existe o script npm.
 
 | Comando             | Descrição                                    |
 | ------------------- | -------------------------------------------- |
 | build               | Gera a versão de produção do projeto         |
 | dev                 | Inicializa o projeto em modo desenvolvimento |
 | start               | Inicializa o projeto em modo produção        |
-| lint                | Aplica lint em todo o projeto                |
-| format              | Aplica prettier em todo o projeto            |
-| test                | Executa todos os testes do projeto           |
+| lint                | Aplica lint no projeto inteiro               |
+| format              | Aplica prettier no projeto inteiro           |
+| test                | Executa os testes do projeto                 |
 | clean               | Remove a pasta node_modules,coverage e dist  |
 | update-dependencies | Atualiza as dependências do projeto          |
 | docs:init           | Inicializa a documentação                    |

@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { Item } from '@/types'
 
-interface TodoItemProps {
+interface TaskItemProps {
   item: Item
   toggleItem(uuid: string, completed: boolean): void
   toggleEditItem(uuid: string): void
@@ -9,13 +9,13 @@ interface TodoItemProps {
   removeItem(uuid: string): void
 }
 
-const TodoItem = ({
+const TaskItem = ({
   item: { uuid, title, description, editing, completed },
   toggleItem,
   toggleEditItem,
   updateItem,
   removeItem
-}: TodoItemProps) => {
+}: TaskItemProps) => {
   const inputTitle = useRef<HTMLInputElement>(null)
   const inputDescription = useRef<HTMLInputElement>(null)
 
@@ -74,4 +74,4 @@ const TodoItem = ({
   )
 }
 
-export default TodoItem
+export default TaskItem

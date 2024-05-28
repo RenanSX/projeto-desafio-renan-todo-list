@@ -1,6 +1,6 @@
 #### Visão Geral
 
-Este documento detalha as bibliotecas e pacotes centrais utilizados no Todo List. Como cada pacote contribui para a funcionalidade, desempenho e segurança do site.
+Este documento detalha as bibliotecas e pacotes centrais utilizados no Task List. Como cada pacote contribui para a funcionalidade, desempenho e segurança do site.
 
 Dependências
 **@reduxjs/toolkit**

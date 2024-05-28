@@ -1,5 +1,5 @@
 import { VisibilityFilters } from '@/types'
-import { EmptyMessage, TodoFilters } from '@/components'
+import { EmptyMessage, TaskFilters } from '@/components'
 
 interface MessageProps {
   filterState: string
@@ -9,17 +9,17 @@ interface MessageProps {
   }
 }
 
-const TodoMessage = ({ filterState, getTaskCounter }: MessageProps) =>
+const TaskMessage = ({ filterState, getTaskCounter }: MessageProps) =>
   filterState === VisibilityFilters.SHOW_COMPLETED ? (
     <>
       <EmptyMessage message="Não há tarefas completas ainda!" />
-      <TodoFilters taskCounter={getTaskCounter()} />
+      <TaskFilters taskCounter={getTaskCounter()} />
     </>
   ) : (
     <>
       <EmptyMessage message="Adicione uma tarefa!" />
-      <TodoFilters taskCounter={getTaskCounter()} />
+      <TaskFilters taskCounter={getTaskCounter()} />
     </>
   )
 
-export default TodoMessage
+export default TaskMessage
