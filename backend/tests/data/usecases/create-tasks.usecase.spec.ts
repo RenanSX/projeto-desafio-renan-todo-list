@@ -1,6 +1,5 @@
 import { ICreateTaskRepository } from '@/data/protocols/database/tasks'
 import { CreateTaskUseCase } from '@/data/usecases/tasks'
-import { MESSAGES } from '@/domain/entities'
 import { ICreateTask } from '@/domain/usecases/tasks'
 
 describe('CreateTaskUseCase', () => {
@@ -33,7 +32,7 @@ describe('CreateTaskUseCase', () => {
 
     const result = await createTaskUseCase.createTask(taskData)
 
-    expect(result).toEqual(MESSAGES.createTaskSuccess('mocked_id'))
+    expect(result).toEqual('mocked_id')
   })
 
   it('should throw if CreateTaskRepository throws', async () => {

@@ -1,8 +1,8 @@
-# Implementação de Containers no Todo List
+# Implementação de Containers no Task List
 
 ## Visão Geral
 
-Este documento mostra os ambientes do backend e frontend do Todo List usando Docker e Docker Compose from organizados. Essas ferramentas ajudam a tornar a aplicação mais simples de ajustar, testar e colocar em funcionamento, em qualquer lugar.
+Este documento mostra os ambientes do backend e frontend do Task List usando Docker e Docker Compose from organizados. Essas ferramentas ajudam a tornar a aplicação mais simples de ajustar, testar e colocar em funcionamento, em qualquer lugar.
 
 ## Por Que Usar Containers?
 
@@ -17,7 +17,7 @@ Escolhi os containers por vários motivos práticos:
 
 **Dockerfile:**
 
-- Preparei um Dockerfile para o backend do Todo List, indicando o sistema base, as dependências, os arquivos do projeto e os comandos para ativar a aplicação. Esse arquivo é a base para montar a imagem Docker do backend, garantindo que tudo que é necessário esteja pronto para uso.
+- Preparei um Dockerfile para o backend do Task List, indicando o sistema base, as dependências, os arquivos do projeto e os comandos para ativar a aplicação. Esse arquivo é a base para montar a imagem Docker do backend, garantindo que tudo que é necessário esteja pronto para uso.
 
 **Docker Compose:**
 
@@ -26,6 +26,6 @@ Escolhi os containers por vários motivos práticos:
 
 ## Conclusão
 
-Escolher containers com Docker e Docker Compose para o Todo List tornou tudo mais prático, facilitando a gestão do ambiente de desenvolvimento e produção.
+Escolher containers com Docker e Docker Compose para o Task List tornou tudo mais prático, facilitando a gestão do ambiente de desenvolvimento e produção.
 
 ![container](../images/container.png)

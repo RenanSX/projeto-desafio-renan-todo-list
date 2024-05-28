@@ -1,8 +1,8 @@
-# Estrutura Organizacional do Código do Backend do Todo List
+# Estrutura Organizacional do Código do Backend do Task List
 
 ## Visão Geral
 
-Este documento explica como organizei a estrutura do código do backend do Todo List. A disposição dos diretórios e arquivos foi pensada para refletir claramente as diferentes camadas da arquitetura, separando as responsabilidades e tornando mais fácil entender e gerenciar o código.
+Este documento explica como organizei a estrutura do código do backend do Task List. A disposição dos diretórios e arquivos foi pensada para refletir claramente as diferentes camadas da arquitetura, separando as responsabilidades e tornando mais fácil entender e gerenciar o código.
 
 ## Organização dos Diretórios e Arquivos
 
@@ -26,6 +26,6 @@ A estrutura foi pensada para facilitar o desenvolvimento e a manutenção do sis
 
 ## Conclusão
 
-A organização do código do backend do Todo List foi feita pensando em claridade, manutenção e escalabilidade.
+A organização do código do backend do Task List foi feita pensando em claridade, manutenção e escalabilidade.
 
 ![estrutura](../images/estrutura.png)

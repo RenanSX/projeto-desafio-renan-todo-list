@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { Dispatch, bindActionCreators } from 'redux'
-import * as filterActions from '../store/actions/filter'
-import { ApplicationState } from '../types'
+import * as filterActions from '@/store/actions/filter'
+import { ApplicationState } from '@/types'
 
 interface StateProps {
   filterSelected: boolean

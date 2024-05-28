@@ -1,11 +1,11 @@
 import { FormEvent, useRef, useEffect } from 'react'
 
-interface TodoFormProps {
+interface TaskFormProps {
   emptyList: boolean
   addItem(title: string, description: string): void
 }
 
-const TodoForm = ({ emptyList, addItem }: TodoFormProps) => {
+const TaskForm = ({ emptyList, addItem }: TaskFormProps) => {
   const inputText = useRef<HTMLInputElement>(null)
   const inputDescription = useRef<HTMLInputElement>(null)
 
@@ -37,7 +37,7 @@ const TodoForm = ({ emptyList, addItem }: TodoFormProps) => {
   }
 
   return (
-    <form onSubmit={submitHandler}>
+    <form data-testid="Task-form" onSubmit={submitHandler}>
       <input ref={inputText} placeholder="Insira um título" />
       <input ref={inputDescription} placeholder="Insira a descrição da tarefa" />
       <button type="submit">
@@ -47,4 +47,4 @@ const TodoForm = ({ emptyList, addItem }: TodoFormProps) => {
   )
 }
 
-export default TodoForm
+export default TaskForm

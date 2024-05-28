@@ -1,5 +1,5 @@
-import FilterLink from '../containers/FilterLink'
-import { VisibilityFilters } from '../types'
+import FilterLink from '@/containers/FilterLink'
+import { VisibilityFilters } from '@/types'
 
 interface CounterProps {
   taskCounter: {
@@ -8,17 +8,17 @@ interface CounterProps {
   }
 }
 
-const TodoFilters = ({ taskCounter: { counter, text } }: CounterProps) => (
+const TaskFilters = ({ taskCounter: { counter, text } }: CounterProps) => (
   <div className="filters-container">
     <div>
       <span className="active">{counter}</span> <span>{text}</span>
     </div>
     <div className="filters">
-      <FilterLink filter={VisibilityFilters.SHOW_ALL}>Todos</FilterLink>
+      <FilterLink filter={VisibilityFilters.SHOW_ALL}>Todas</FilterLink>
       <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>Ativos</FilterLink>
       <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>Completos</FilterLink>
     </div>
   </div>
 )
 
-export default TodoFilters
+export default TaskFilters

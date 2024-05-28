@@ -1,12 +1,12 @@
-import { ItemsState, ItemsTypes, TodoListActionTypes } from '../../types'
+import { ItemsState, ItemsTypes, TaskListActionTypes } from '@/types'
 
 const initialState: ItemsState = {
   data: []
 }
 
-export default function itemsReducer(state = initialState, action: TodoListActionTypes): ItemsState {
+export default function itemsReducer(state = initialState, action: TaskListActionTypes): ItemsState {
   switch (action.type) {
-    case ItemsTypes.ADD_ITEM:
+    case ItemsTypes.INSERT_SUCCESS:
       return {
         data: [
           ...state.data,

@@ -4,6 +4,7 @@ import { Sequelize } from 'sequelize'
 
 export const connectionDatabase = new Sequelize(env.dbName, env.dbUser, env.dbPassword, {
   host: env.dbHost,
+  port: Number(env.dbPort),
   dialect: 'mysql'
 })
 export const databaseInit = async (): Promise<void> => {

@@ -1,6 +1,6 @@
 #### Visão Geral
 
-Este documento oferece uma visão técnica detalhada da estrutura do projeto Todo List. A disposição dos diretórios e arquivos foi pensada para refletir claramente as diferentes camadas da arquitetura, separando as responsabilidades e tornando mais fácil entender e gerenciar o código.
+Este documento oferece uma visão técnica detalhada da estrutura do projeto Task List. A disposição dos diretórios e arquivos foi pensada para refletir claramente as diferentes camadas da arquitetura, separando as responsabilidades e tornando mais fácil entender e gerenciar o código.
 
 Estrutura de Diretórios
 Logo abaixo está detalhamento técnico da estrutura de diretórios adotada e o propósito de cada diretório:

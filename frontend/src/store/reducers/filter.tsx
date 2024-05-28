@@ -1,4 +1,4 @@
-import { VisibilityFilters, FilterActionTypes } from '../../types'
+import { VisibilityFilters, FilterActionTypes } from '@/types'
 
 const filterReducer = (state = VisibilityFilters.SHOW_ALL, { type, payload }: FilterActionTypes) => {
   switch (type) {

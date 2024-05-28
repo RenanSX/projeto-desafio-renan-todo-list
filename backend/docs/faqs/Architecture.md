@@ -1,12 +1,12 @@
-# Arquitetura do Todo List
+# Arquitetura do Task List
 
 ## Visão Geral
 
-Este documento mostra como a arquitetura do projeto TodoList backend foi montada e as decisões por trás de cada uma.
+Este documento mostra como a arquitetura do projeto TaskList backend foi montada e as decisões por trás de cada uma.
 
 ## Arquitetura do Backend
 
-A arquitetura do backend foi cuidadosamente escolhida para atender às especificidades do Todo List, buscando equilíbrio entre desempenho, capacidade de expansão e simplicidade de manutenção.
+A arquitetura do backend foi cuidadosamente escolhida para atender às especificidades do Task List, buscando equilíbrio entre desempenho, capacidade de expansão e simplicidade de manutenção.
 
 ### Clean Architecture
 
@@ -18,7 +18,7 @@ A arquitetura do backend foi cuidadosamente escolhida para atender às especific
 
 ### Domain-Driven Design (DDD)
 
-- **Adoção do DDD:** Usei o Domain-Driven Design para que o design do backend refletisse bem as regras e processos de negócio do Todo List. Isso ajuda a garantir que o código esteja alinhado com as necessidades e complexidades específicas do projeto.
+- **Adoção do DDD:** Usei o Domain-Driven Design para que o design do backend refletisse bem as regras e processos de negócio do Task List. Isso ajuda a garantir que o código esteja alinhado com as necessidades e complexidades específicas do projeto.
 
 - **Modelagem de Domínio:** Criei modelos de domínio que definem a estrutura de dados e as regras de negócio, atuando como o coração do sistema.
 
@@ -26,6 +26,6 @@ A arquitetura do backend foi cuidadosamente escolhida para atender às especific
 
 ## Conclusão
 
-A escolha dessa arquitetura reflete minha dedicação em construir um backend bem integrado, eficiente e preparado para crescer junto com o Todo List.
+A escolha dessa arquitetura reflete minha dedicação em construir um backend bem integrado, eficiente e preparado para crescer junto com o Task List.
 
 ![clean_arch](../images/clean_arch.png)

@@ -1,7 +1,7 @@
 {
-  "name": "desafio-renan-todo-list-backend",
+  "name": "desafio-renan-task-list-backend",
   "version": "1.0.0",
-  "description": "Backend para o projeto Todo List",
+  "description": "Backend para o projeto Task List",
   "scripts": {
     "build": "rm -rf dist && tsc -p tsconfig.build.json",
     "clean": "rm -rf coverage dist && rm -rf node_modules && rm -rf coverage",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RenanSX/desafio-renan-todo-list.git"
+    "url": "git+https://github.com/RenanSX/desafio-renan-task-list.git"
   },
   "engines": {
     "node": "20",
@@ -29,9 +29,9 @@
   "author": "Renan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RenanSX/desafio-renan-todo-list/issues"
+    "url": "https://github.com/RenanSX/desafio-renan-task-list/issues"
   },
-  "homepage": "https://github.com/RenanSX/desafio-renan-todo-list#readme",
+  "homepage": "https://github.com/RenanSX/desafio-renan-task-list#readme",
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "18.4.3",

@@ -1,4 +1,4 @@
-import { Item, ItemsTypes } from '../../types'
+import { Item, ItemsTypes } from '@/types'
 
 export const addItem = (title: string, description: string) => ({
   type: ItemsTypes.ADD_ITEM,
@@ -51,3 +51,8 @@ export const loadSuccess = (data: Item[]) => ({
 export const loadFailure = () => ({
   type: ItemsTypes.LOAD_FAILURE
 })
+
+export const insertTaskSuccess = (data: Item) => ({
+  type: ItemsTypes.INSERT_SUCCESS,
+  payload: data,
+});

@@ -1,9 +1,9 @@
-import { TaskInput } from '@/data/entity/task.entity'
+import { TaskInput, TaskOutput } from '@/data/entity/task.entity'
 
 export namespace ICreateTaskRepository {
   export type Params = TaskInput
 
-  export type Result = string | null
+  export type Result = TaskOutput
 }
 
 export interface ICreateTaskRepository {

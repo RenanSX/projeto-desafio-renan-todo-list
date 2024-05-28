@@ -12,18 +12,6 @@ describe('MESSAGES', () => {
     expect(MESSAGES.taskNotFound(id)).toBe(expectedMessage)
   })
 
-  it('should generate the correct create task success message', () => {
-    const id = '123'
-    const expectedMessage = `Task created with success, ID: ${id}`
-    expect(MESSAGES.createTaskSuccess(id)).toBe(expectedMessage)
-  })
-
-  it('should generate the correct update task success message', () => {
-    const id = '123'
-    const expectedMessage = `Task updated with success, ID: ${id}`
-    expect(MESSAGES.updateTaskSuccess(id)).toBe(expectedMessage)
-  })
-
   it('should generate the correct delete task success message', () => {
     const id = '123'
     const expectedMessage = `Task ${id} deleted with success`

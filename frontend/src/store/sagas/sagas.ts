@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { call, put } from 'redux-saga/effects'
-import api from '../../services/api'
-import { InsertTodoActionTypes, TodoListActionTypes } from '../../types'
-import { loadFailure, loadSuccess } from '../actions/items'
+import { call, put, takeLatest } from 'redux-saga/effects'
+import api from '@/services/api'
+import { InsertTaskActionTypes, ItemsTypes, TaskListActionTypes } from '@/types'
+import { loadFailure, loadSuccess, insertTaskSuccess } from '@/store/actions/items'
 
 export function* loadRequest() {
   try {
@@ -13,16 +13,20 @@ export function* loadRequest() {
   }
 }
 
-export function* insertRequest(payload: InsertTodoActionTypes) {
+export function* insertRequest(payload: InsertTaskActionTypes) {
   try {
-    yield call(api.post, '/tasks', payload.payload)
+    const {data} = yield call(api.post, '/tasks', payload.payload)
+    yield put(insertTaskSuccess(data.body));
   } catch (error) {
     yield put(loadFailure())
   }
 }
 
-export function* markCompleteRequest({ payload }: TodoListActionTypes) {
-  console.log('toggle item', payload)
+export function* watchInsertRequest() {
+  yield takeLatest(ItemsTypes.ADD_ITEM, insertRequest);
+}
+
+export function* markCompleteRequest({ payload }: TaskListActionTypes) {
   try {
     const dataPayload = {
       completed: payload.completed
@@ -33,8 +37,7 @@ export function* markCompleteRequest({ payload }: TodoListActionTypes) {
   }
 }
 
-export function* findByIdRequest({ payload }: TodoListActionTypes) {
-  console.log('toggle edit item', payload)
+export function* findByIdRequest({ payload }: TaskListActionTypes) {
   try {
     yield call(api.get, `/tasks/${payload.uuid}`)
   } catch (error) {
@@ -42,7 +45,7 @@ export function* findByIdRequest({ payload }: TodoListActionTypes) {
   }
 }
 
-export function* updateRequest({ payload }: TodoListActionTypes) {
+export function* updateRequest({ payload }: TaskListActionTypes) {
   try {
     const dataPayload = {
       title: payload.title,
@@ -54,9 +57,8 @@ export function* updateRequest({ payload }: TodoListActionTypes) {
   }
 }
 
-export function* deleteRequest({ payload }: TodoListActionTypes) {
+export function* deleteRequest({ payload }: TaskListActionTypes) {
   try {
-    console.log
     yield call(api.delete, `/tasks/${payload.uuid}`)
   } catch (error) {
     yield put(loadFailure())

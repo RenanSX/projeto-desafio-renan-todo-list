@@ -1,8 +1,8 @@
-# Bibliotecas do Backend do Todo List
+# Bibliotecas do Backend do Task List
 
 ## Visão Geral
 
-Este documento detalha as bibliotecas que escolhi para o backend do Todo List, com foco em otimizar o desempenho, a segurança e a eficiência do desenvolvimento. Abaixo estão detalhes sobre cada pacote, suas funções e as razões por trás da minha escolha.
+Este documento detalha as bibliotecas que escolhi para o backend do Task List, com foco em otimizar o desempenho, a segurança e a eficiência do desenvolvimento. Abaixo estão detalhes sobre cada pacote, suas funções e as razões por trás da minha escolha.
 
 ### Fastify
 
@@ -24,4 +24,4 @@ Este documento detalha as bibliotecas que escolhi para o backend do Todo List, c
 
 ## Conclusão
 
-A escolha de cada uma dessas bibliotecas foi feita com o intuito de montar um backend eficiente, seguro e fácil de manter para o Todo List.
+A escolha de cada uma dessas bibliotecas foi feita com o intuito de montar um backend eficiente, seguro e fácil de manter para o Task List.

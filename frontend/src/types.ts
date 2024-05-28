@@ -9,7 +9,8 @@ export enum ItemsTypes {
   REMOVE_ITEM = 'REMOVE_ITEM',
   LOAD_REQUEST = 'LOAD_REQUEST',
   LOAD_SUCCESS = 'LOAD_SUCCESS',
-  LOAD_FAILURE = 'LOAD_FAILURE'
+  LOAD_FAILURE = 'LOAD_FAILURE',
+  INSERT_SUCCESS = 'INSERT_SUCCESS'
 }
 
 /**
@@ -22,7 +23,7 @@ export enum VisibilityFilters {
   UPDATE_FILTER = 'UPDATE_FILTER'
 }
 
-export interface TodoListActionTypes {
+export interface TaskListActionTypes {
   type: string
   payload: Item
   data: Item[]
@@ -35,7 +36,7 @@ export interface FilterActionTypes {
   }
 }
 
-export interface InsertTodoActionTypes {
+export interface InsertTaskActionTypes {
   type: string
   payload: InsertItem
 }

@@ -1,4 +1,4 @@
-# Estratégias e Ferramentas de Teste no Todo List
+# Estratégias e Ferramentas de Teste no Task List
 
 ## Visão Geral
 
@@ -8,7 +8,7 @@ Neste documento, vou detalhar as estratégias e ferramentas de teste que impleme
 
 ### 1. Testes Unitários (Jest)
 
-- **Descrição:** Escrevi uma série de testes unitários para verificar partes isoladas do código, como funções e métodos. Para os componentes React, utilizei o Jest juntamente com a Testing Library.
+- **Descrição:** Escrevi uma série de testes unitários para verificar partes isoladas do código, como funções. Para os componentes React, utilizei o Jest juntamente com a Testing Library.
 - **Benefícios:** Isso garante que cada módulo ou serviço funcione corretamente por si só, além de validar a integração entre eles e os fluxos de negócio do aplicativo.
 
 ![coverage](../images/coverage.png)
@@ -20,4 +20,4 @@ Neste documento, vou detalhar as estratégias e ferramentas de teste que impleme
 
 ## Conclusão
 
-Implementar essas estratégias e ferramentas de teste foi essencial para garantir a qualidade, segurança e performance do Todo List. Elas ajudaram a manter o código limpo e organizado, além de prevenir bugs e comportamentos inesperados.
+Implementar essas estratégias e ferramentas de teste foi essencial para garantir a qualidade, segurança e performance do Task List. Elas ajudaram a manter o código limpo e organizado, além de prevenir bugs e comportamentos inesperados.

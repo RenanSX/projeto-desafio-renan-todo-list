@@ -1,14 +1,14 @@
 export default {
   openapi: {
     info: {
-      title: 'Desafio Backend Renan Todo List',
+      title: 'Desafio Backend Renan Task List',
       contact: {
         name: 'Github',
-        url: 'https://github.com/RenanSX/desafio-renan-todo-list'
+        url: 'https://github.com/RenanSX/desafio-renan-task-list'
       },
       version: '1.0',
       description:
-        'O backend do <b>"Todo List"</b> é responsável por gerenciar as tarefas de um usuário, permitindo operações como listagem, detalhamento, criação, atualização e remoção de tarefas.'
+        'O backend do <b>"Task List"</b> é responsável por gerenciar as tarefas de um usuário, permitindo operações como listagem, detalhamento, criação, atualização e remoção de tarefas.'
     },
     servers: [
       {
@@ -163,13 +163,15 @@ export default {
                     { $ref: '#/components/schemas/update-task-request' },
                     {
                       example: {
-                        state: false
+                        title: 'Fazer compras no shopping',
+                        description: 'Fazer compras no shooping mais próximo da minha casa no próximo final de semana.'
                       }
                     }
                   ]
                 },
                 example: {
-                  state: false
+                  title: 'Fazer compras no shopping',
+                  description: 'Fazer compras no shooping mais próximo da minha casa no próximo final de semana.'
                 }
               }
             },
@@ -214,13 +216,13 @@ export default {
                     { $ref: '#/components/schemas/complete-task-request' },
                     {
                       example: {
-                        state: false
+                        completed: true
                       }
                     }
                   ]
                 },
                 example: {
-                  state: false
+                  completed: true
                 }
               }
             },
