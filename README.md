@@ -25,7 +25,11 @@
 2. Execute `docker-compose up -d` na raiz do projeto.
 3. O frontend vai estar disponivel em `http://localhost:3000` e o backend em `http://localhost:3333`. Isso vai subir tanto o backend quanto o frontend em containers Docker.
 
-Observações: Lembre de deixar as portas `3000` e `3333` liberados no seu computador.
+Observações:
+
+- Lembre de deixar as portas `3000` e `3333` liberados no seu computador.
+- Em caso de conflito nas etapas de instalações de dependências, não se esqueça de limpar as mesmas localmente com `npm run clean` tanto backend quanto frontend.
+- O Container do backend só ficará em pé após o container de banco de dados estiver healthy, isso pode levar alguns segundos a mais.
 
 ### Makefile
 
@@ -34,6 +38,29 @@ Para facilitar a execução de comandos, utilize o arquivo Makefile disponível 
 - **Para construir as imagens Docker:**: `make build`
 - **Para executar o projetoo**: `make up`
 - **Para parar os serviços**: `make down`
+
+### Rodar localmente
+
+## Backend
+
+Execute o seguinte passo a passo
+
+- Acesse a pasta do backend `cd backend`
+- Instale as depêndencias `npm install`
+- Crie o arquivo env `cp .env.example .env`, cole os valores das variáveis
+- Rode o projeto `npm run dev`
+- Importe a Collection (Desafio Renan TodoList Backend - Collection.postman_collection.json) do postman que se encontra na pasta [`postman`](./backend/docs/postman/)
+- Execute o projeto através da url `http://localhost:3333`
+
+## Frontend
+
+Execute o seguinte passo a passo
+
+- Acesse a pasta do frontend `cd frontend`
+- Instale as depêndencias `npm install`
+- Crie o arquivo env `cp .env.example .env`, cole os valores das variáveis
+- Rode o projeto `npm run dev`
+- Execute a página do projeto através da url `http://localhost:3000`
 
 ## Documentação
 

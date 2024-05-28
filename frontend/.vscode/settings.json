@@ -5,11 +5,12 @@
   "[handlebars]": {
     "editor.formatOnSave": false
   },
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.fixAll.eslint": "explicit"
-  },
   "editor.formatOnSave": true,
+  "eslint.options": {
+    "overrideConfigFile": "./.eslintrc.json"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.configPath": "./.prettierrc.json",
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -17,6 +18,7 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
-    "node_modules": false
+    "node_modules": false,
+    "coverage": false
   }
 }

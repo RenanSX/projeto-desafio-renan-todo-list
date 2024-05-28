@@ -7,23 +7,25 @@ services:
       dockerfile: ./dockerfiles/Dockerfile.backend
       context: ./backend
     ports:
-      - "3333:3333"
+      - 3333:3333
     volumes:
       - backend_node_modules:/app/node_modules
       - ./backend:/app
     environment:
       NODE_ENV: production
       LOG_LEVEL: debug
-      DB_HOST: db-desafio-renan.c940ci240730.us-east-1.rds.amazonaws.com
-      DB_USERNAME: admin
-      DB_PASSWORD: yH865687a2RQ
-      DB_PORT: 3306
+      DB_HOST: todo_list_db
+      DB_USERNAME: root
+      DB_PASSWORD: P@ssWord
+      DB_PORT: 3307
       DB_NAME: task_db
       PORT: 3333
       AUTH_USERNAME: admin
       AUTH_PASSWORD: c884h524YTMN
-      CORS_ORIGIN: "*"
+      CORS_ORIGIN:  http://localhost:3000
     restart: on-failure
+    depends_on:
+      - todo_list_db
     networks:
       - todo_list_network
 
@@ -33,22 +35,45 @@ services:
       dockerfile: ./dockerfiles/Dockerfile.frontend
       context: ./frontend
     ports:
-      - "3000:3000"
+      - 3000:3000
     volumes:
       - frontend_node_modules:/app/node_modules
       - ./frontend:/app
     environment:
       NODE_ENV: production
-      REACT_APP_URL_BACKEND: todo_list_backend:3333
+      REACT_APP_URL_BACKEND: http://localhost:3333
       REACT_APP_AUTH_USER: admin
       REACT_APP_AUTH_PASS: c884h524YTMN
     restart: on-failure
     networks:
       - todo_list_network
 
+  todo_list_db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: P@ssWord
+      MYSQL_DATABASE: task_db
+    ports:
+      - 3307:3306
+    expose:
+      - 3307
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: always
+    networks:
+      todo_list_network:
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      retries: 3
+      interval: 30s
+      timeout: 10s
+
 volumes:
   backend_node_modules:
   frontend_node_modules:
+  mysql_data:
+    driver: local
 
 networks:
   todo_list_network:
+    driver: bridge

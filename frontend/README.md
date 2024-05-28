@@ -54,10 +54,10 @@ Os comandos abaixo serão executados no nível monorepo - em todos os aplicativo
 
 ### Estrutura
 
-- [`components`](./src/components) - Agrupa componentes React de acordo com o Atomic Design, divididos em átomos, moléculas, organismos,
-- [`containers`](./src/containers) - Agrupa conteiners no codigo afim de aumentar eficiëncia, escalabilidade e modularidade.
+- [`components`](./src/components) - Agrupa os componentes da aplicação.
+- [`containers`](./src/containers) - Agrupa conteiners no codigo afim de aumentar eficiência, escalabilidade e modularidade.
 - [`services`](./src/services) - Agrupa serviços para comunicação com APIs externas e outras operações de IO.
-- [`store`](./src/store) - Configura e gerencia o estado global com Redux Toolkit, facilitando o gerenciamento de estado em lugares mais complexos. Contém funções e esquemas para validação de formulários com Yup, permitindo validar dados de entrada sem poluir os componentes.
+- [`store`](./src/store) - Configura e gerencia o estado global com Redux Toolkit, facilitando o gerenciamento de estado em lugares mais complexos.
 
 ### Documentações
 
