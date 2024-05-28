@@ -1,12 +1,4 @@
-import {
-  setupCompress,
-  setupCookie,
-  setupCors,
-  setupCsrf,
-  setupHelmet,
-  setupRateLimit,
-  setupSession
-} from '@/main/middlewares'
+import { setupCors, setupCsrf, setupHelmet, setupRateLimit } from '@/main/middlewares'
 import { Routes } from '@/presentation/protocols'
 import Swagger, { SwaggerOptions } from '@fastify/swagger'
 import SwaggerUi from '@fastify/swagger-ui'
@@ -45,15 +37,6 @@ export class FastifyAdapter implements IFastifyAdapter {
 
     // CORS
     setupCors(this.app)
-
-    // Cookies
-    setupCookie(this.app)
-
-    // Session Management
-    setupSession(this.app)
-
-    // Compression
-    setupCompress(this.app)
 
     // CSRF Protection
     setupCsrf(this.app)

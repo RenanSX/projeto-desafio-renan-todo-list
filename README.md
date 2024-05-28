@@ -29,11 +29,11 @@ Observações:
 
 - Lembre de deixar as portas `3000` e `3333` liberados no seu computador.
 - Em caso de conflito nas etapas de instalações de dependências, não se esqueça de limpar as mesmas localmente com `npm run clean` tanto backend quanto frontend.
-- O Container do backend só ficará em pé após o container de banco de dados estiver healthy, isso pode levar alguns segundos a mais.
+- O Container do backend só ficará em pé após o container de banco de dados estiver healthy, isso pode levar alguns segundos.
 
 ### Rodar localmente
 
-## Backend
+#### Backend
 
 Execute o seguinte passo a passo
 
@@ -44,7 +44,7 @@ Execute o seguinte passo a passo
 - Importe a Collection (Desafio Renan TaskList Backend - Collection.postman_collection.json) do postman que se encontra na pasta [`postman`](./backend/docs/postman/)
 - Execute o projeto através da url `http://localhost:3333`
 
-## Frontend
+#### Frontend
 
 Execute o seguinte passo a passo
 

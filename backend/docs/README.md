@@ -10,6 +10,7 @@ Bem-vindo à documentação central do **backend** do Task List! Esta documenta�
 - [Packages.md](./faqs/Packages.md) - Lista e justifica todas as dependências e pacotes utilizados no backend.
 - [Structure.md](./faqs/Structure.md) - Fornece uma visão da estrutura de diretórios e organização de código no backend.
 - [Tests.md](./faqs/Tests.md) - Explica as estratégias e ferramentas de teste implementadas para garantir a qualidade do backend.
+- [Security.md](./faqs/Security.md) - Detalha as implementações de segurança, incluindo middlewares e práticas adotadas para proteger a aplicação.
 
 ## Como Utilizar
 
