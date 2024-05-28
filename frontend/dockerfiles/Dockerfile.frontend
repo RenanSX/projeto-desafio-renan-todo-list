@@ -1,12 +1,11 @@
 # Build
 FROM node:18-alpine AS builder
+
 WORKDIR /app
-
-COPY . ./
 COPY package*.json ./
-
-RUN npm ci \
-    && npm run build
+RUN npm install
+COPY . .
+RUN npm run build
 
 # Release
 FROM node:18-alpine

@@ -1,4 +1,4 @@
-import { setupCors, setupCsrf, setupHelmet, setupRateLimit } from '@/main/middlewares'
+import { setupCors, setupHelmet, setupRateLimit } from '@/main/middlewares'
 import { Routes } from '@/presentation/protocols'
 import Swagger, { SwaggerOptions } from '@fastify/swagger'
 import SwaggerUi from '@fastify/swagger-ui'
@@ -37,9 +37,6 @@ export class FastifyAdapter implements IFastifyAdapter {
 
     // CORS
     setupCors(this.app)
-
-    // CSRF Protection
-    setupCsrf(this.app)
   }
 
   private registerRoutes(routes: Routes[]) {

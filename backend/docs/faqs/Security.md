@@ -30,8 +30,3 @@ Este texto detalha as práticas e configurações de segurança que implementei 
 - **Defesa:** Configuro várias medidas de segurança para proteger contra clickjacking, sniffing de MIME type e XSS, incluindo Content Security Policy, X-Frame-Options e X-Content-Type-Options.
 
 ![reponse-headers](../images/reponse-headers.png)
-
-### 5. CSRF Middleware (csrf.middleware.ts)
-
-- **Vulnerabilidade:** Cross-Site Request Forgery.
-- **Defesa:** Utilizo tokens CSRF e validações adicionais para garantir que todas as requisições sejam legítimas e intencionais, protegendo contra ataques que realizam ações prejudiciais em nome dos usuários.
