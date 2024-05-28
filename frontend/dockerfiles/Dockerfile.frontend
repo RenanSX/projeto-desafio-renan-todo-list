@@ -19,7 +19,7 @@ COPY --from=builder /app/dist /app/dist
 
 RUN addgroup -S appuser && adduser -S appuser -G appuser \
     && chown -R appuser:appuser /app/ \
-    && chmod 756 /app/
+    && chmod 777 /app/
 
 USER appuser
 

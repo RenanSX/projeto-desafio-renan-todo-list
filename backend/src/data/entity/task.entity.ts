@@ -74,6 +74,7 @@ Task.init(
   {
     timestamps: true,
     sequelize: connectionDatabase,
+    paranoid: true, // Soft delete
     hooks: {
       afterCreate: (record: any) => {
         delete record.dataValues.id

@@ -6,7 +6,7 @@ const initialState: ItemsState = {
 
 export default function itemsReducer(state = initialState, action: TodoListActionTypes): ItemsState {
   switch (action.type) {
-    case ItemsTypes.ADD_ITEM:
+    case ItemsTypes.INSERT_SUCCESS:
       return {
         data: [
           ...state.data,

@@ -9,12 +9,6 @@ export class UpdateTaskRepository implements IUpdateTaskRepository {
       return task
     }
     const taskUpdate = await task.update(dataWithoutId)
-    return {
-      uuid: taskUpdate.dataValues.uuid,
-      title: taskUpdate.dataValues.title,
-      description: taskUpdate.dataValues.description,
-      completed: taskUpdate.dataValues.completed,
-      editing: taskUpdate.dataValues.editing
-    }
+    return taskUpdate.dataValues
   }
 }

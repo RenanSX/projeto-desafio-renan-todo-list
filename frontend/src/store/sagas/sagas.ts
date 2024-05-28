@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { call, put } from 'redux-saga/effects'
+import { call, put, takeLatest } from 'redux-saga/effects'
 import api from '@/services/api'
-import { InsertTodoActionTypes, TodoListActionTypes } from '@/types'
-import { loadFailure, loadSuccess } from '@/store/actions/items'
+import { InsertTodoActionTypes, ItemsTypes, TodoListActionTypes } from '@/types'
+import { loadFailure, loadSuccess, insertTodoSuccess } from '@/store/actions/items'
 
 export function* loadRequest() {
   try {
@@ -15,10 +15,15 @@ export function* loadRequest() {
 
 export function* insertRequest(payload: InsertTodoActionTypes) {
   try {
-    yield call(api.post, '/tasks', payload.payload)
+    const {data} = yield call(api.post, '/tasks', payload.payload)
+    yield put(insertTodoSuccess(data.body));
   } catch (error) {
     yield put(loadFailure())
   }
+}
+
+export function* watchInsertRequest() {
+  yield takeLatest(ItemsTypes.ADD_ITEM, insertRequest);
 }
 
 export function* markCompleteRequest({ payload }: TodoListActionTypes) {

@@ -74,6 +74,8 @@ export class FastifyAdapter implements IFastifyAdapter {
     try {
       await this.app.listen({ port: this.port, host: '0.0.0.0' })
     } catch (err) {
+      // eslint-disable-next-line no-console
+      console.log(err)
       process.exit(1)
     }
   }

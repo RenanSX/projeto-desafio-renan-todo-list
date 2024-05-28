@@ -41,7 +41,6 @@ const TodoForm = ({ emptyList, addItem }: TodoFormProps) => {
       <input ref={inputText} placeholder="Insira um título" />
       <input ref={inputDescription} placeholder="Insira a descrição da tarefa" />
       <button type="submit">
-      Salvar
         <i className="fas fa-plus" />
       </button>
     </form>

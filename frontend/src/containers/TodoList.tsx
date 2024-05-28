@@ -47,7 +47,7 @@ const TodoList = ({
         }
 
   return (
-    <div className="todo-list">
+    <div className="task-list">
       <Header title="Lista de tarefas" />
 
       <div className="content">

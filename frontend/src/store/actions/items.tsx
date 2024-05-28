@@ -51,3 +51,8 @@ export const loadSuccess = (data: Item[]) => ({
 export const loadFailure = () => ({
   type: ItemsTypes.LOAD_FAILURE
 })
+
+export const insertTodoSuccess = (data: Item) => ({
+  type: ItemsTypes.INSERT_SUCCESS,
+  payload: data,
+});

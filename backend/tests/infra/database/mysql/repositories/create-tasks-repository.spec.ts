@@ -37,7 +37,7 @@ describe('CreateTaskRepository', () => {
 
     const result = await createTaskRepository.create(payload)
 
-    expect(result).toBe('test_uuid')
+    expect(result).toEqual({ uuid: 'test_uuid' })
   })
 
   it('should throw if Task.create throws', async () => {

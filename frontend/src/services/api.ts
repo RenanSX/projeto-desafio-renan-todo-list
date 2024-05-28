@@ -5,8 +5,6 @@ const URL_BACKEND = process.env.REACT_APP_URL_BACKEND
 const AUTH_USER = process.env.REACT_APP_AUTH_USER
 const AUTH_PASS = process.env.REACT_APP_AUTH_PASS
 
-console.log('URL_BACKEND', URL_BACKEND)
-
 const api = axios.create({
   baseURL: URL_BACKEND
 })

@@ -31,14 +31,6 @@ Observações:
 - Em caso de conflito nas etapas de instalações de dependências, não se esqueça de limpar as mesmas localmente com `npm run clean` tanto backend quanto frontend.
 - O Container do backend só ficará em pé após o container de banco de dados estiver healthy, isso pode levar alguns segundos a mais.
 
-### Makefile
-
-Para facilitar a execução de comandos, utilize o arquivo Makefile disponível na raiz do projeto:
-
-- **Para construir as imagens Docker:**: `make build`
-- **Para executar o projetoo**: `make up`
-- **Para parar os serviços**: `make down`
-
 ### Rodar localmente
 
 ## Backend
