@@ -24,14 +24,14 @@
 1. Certifique-se de ter Docker e Docker Compose.
 2. Crie os arquivos `.env` tanto no backend quanto no frontend, siga os passos:
 
-- Acesse a pasta backend com: `cd backend/`
+- Acesse a pasta backend com: `cd backend/`.
 - Crie o arquivo env `cp .env.example .env`.
-- Adicione as variáveis do backend no arquivo
-- Volte para a pasta raiz e acesso o frontend com: `cd ../frontend/`
+- Adicione as variáveis do backend no arquivo.
+- Volte para a pasta raiz e acesso o frontend com: `cd ../frontend/`.
 - Crie o arquivo env `cp .env.example .env`.
-- Adicione as variáveis do frontend no arquivo
+- Adicione as variáveis do frontend no arquivo.
 
-3. Execute `docker-compose up -d --build` na raiz do projeto.
+3. Volte a raiz do projeto `cd ..` e execute `docker-compose up -d --build`.
 4. O frontend vai estar disponivel em `http://localhost:3000` e o backend em `http://localhost:3333`. Isso vai subir tanto o backend quanto o frontend em containers Docker.
 
 Observações:
@@ -46,22 +46,22 @@ Observações:
 
 Execute o seguinte passo a passo
 
-- Estando na pasta raiz do projeto, acesse a pasta do backend `cd backend/`
-- Instale as depêndencias `npm install`
-- Crie o arquivo env `cp .env.example .env` e adicione as variáveis
-- Rode o projeto `npm run dev`
-- Importe a Collection (Desafio Renan TaskList Backend - Collection.postman_collection.json) do postman que se encontra na pasta [`postman`](./backend/docs/postman/)
-- Execute o projeto através da url `http://localhost:3333`
+- Estando na pasta raiz do projeto, acesse a pasta do backend `cd backend/`.
+- Instale as depêndencias `npm install`.
+- Crie o arquivo env `cp .env.example .env` e adicione as variáveis.
+- Rode o projeto `npm run dev`.
+- Importe a Collection (Desafio Renan TaskList Backend - Collection.postman_collection.json) do postman que se encontra na pasta [`postman`](./backend/docs/postman/).
+- Execute o projeto através da url `http://localhost:3333`.
 
 #### Frontend
 
 Execute o seguinte passo a passo
 
-- Estando na pasta raiz do projeto, acesse a pasta do frontend `cd frontend/`
-- Instale as depêndencias `npm install`
-- Crie o arquivo env `cp .env.example .env` e adicione as variáveis
-- Rode o projeto `npm run dev`
-- Execute a página do projeto através da url `http://localhost:3000`
+- Estando na pasta raiz do projeto, acesse a pasta do frontend `cd frontend/`.
+- Instale as depêndencias `npm install`.
+- Crie o arquivo env `cp .env.example .env` e adicione as variáveis.
+- Rode o projeto `npm run dev`.
+- Execute a página do projeto através da url `http://localhost:3000`.
 
 ## Documentação
 

@@ -6,16 +6,13 @@ Resposta:
 
 Node.js é um ambiente de execução JavaScript baseado no motor V8 do Chrome para desenvolver aplicativos do lado do servidor.
 Sua principal vantagem é a capacidade de lidar com operações de Entrada e Saída de dados de maneira não bloqueante,
-permitindo alta eficiência e escalabilidade em aplicações com muitas conexões simultâneas.
+isso significa que ele pode lidar com muitas conexões ao mesmo tempo, de forma eficiente e escalável.
 
 ## Explique o que é o Fastify e como ele é usado em aplicações Node.js.
 
 Resposta:
 
-Fastify é um framework web para Node.js focado em desempenho e eficiência.
-Ele é usado para construir servidores e APIs rápidos e leves, fornece validação baseada em esquema,
-Sistema modular de plugins, suporte assíncrono/aguardado completo,
-e sobrecarga mínima, facilitando o desenvolvimento de aplicativos escalonáveis ​​e de alto desempenho.
+Fastify é um framework web para Node.js que prioriza desempenho e eficiência. Com ele, você pode criar servidores e APIs que são rápidos e leves. Fastify oferece validação de dados baseada em esquemas, um sistema modular de plugins, suporte completo para operações assíncronas/await, e uma sobrecarga mínima. Tudo isso torna o desenvolvimento de aplicativos escaláveis e de alto desempenho mais fácil e eficiente.
 
 ## Qual é a diferença entre os métodos HTTP GET e POST e quando cada um deve ser usado?
 
