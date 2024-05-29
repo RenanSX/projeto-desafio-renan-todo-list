@@ -1,4 +1,3 @@
-/* eslint-disable import-helpers/order-imports */
 import 'dotenv/config'
 import { FastifyAdapter, IFastifyAdapter } from '@/main/adapters'
 import env from '@/main/config/env'

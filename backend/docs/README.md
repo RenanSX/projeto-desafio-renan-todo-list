@@ -11,6 +11,7 @@ Bem-vindo à documentação central do **backend** do Task List! Esta documenta�
 - [Structure.md](./faqs/Structure.md) - Fornece uma visão da estrutura de diretórios e organização de código no backend.
 - [Tests.md](./faqs/Tests.md) - Explica as estratégias e ferramentas de teste implementadas para garantir a qualidade do backend.
 - [Security.md](./faqs/Security.md) - Detalha as implementações de segurança, incluindo middlewares e práticas adotadas para proteger a aplicação.
+- [C4.md](./faqs/C4.md) - Um breve detalhamento da utilização da aplicação através do C4 Model.
 
 ## Como Utilizar
 

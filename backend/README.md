@@ -54,6 +54,9 @@ Os comandos abaixo serão executados no nível monorepo - nos aplicativos e paco
 | update-dependencies | Atualiza as dependências do projeto          |
 | docs:init           | Inicializa a documentação                    |
 | docs:serve          | Inicializa o servidor de documentação        |
+| db:create           | Cria o banco de dados                        |
+| migration:up        | Cria as migrações do banco de dados          |
+| migration:down      | Exclui as migrações do banco de dados        |
 
 ## Sobre o projeto:
 
@@ -80,6 +83,14 @@ O projeto é documentado usando:
 
 - [Swagger](https://swagger.io/docs/specification/about/)
 - [Docsify](https://docsify.js.org/)
+
+## Banco de dados
+
+Primeiro precisamos criar o banco de dados através do comando
+`npm run db:create`
+
+Agora vamos criar as migrações
+`npm run migration:up`
 
 ## Rodando o projeto
 
