@@ -5,7 +5,7 @@
 Resposta:
 
 Node.js é um ambiente de execução JavaScript baseado no motor V8 do Chrome para desenvolver aplicativos do lado do servidor.
-Sua principal vantagem é a capacidade de lidar com operações de Entrada e Saída de dados de maneira não bloqueante,
+Sua principal vantagem é a capacidade de lidar com operações de I/O de maneira não bloqueante,
 isso significa que ele pode lidar com muitas conexões ao mesmo tempo, de forma eficiente e escalável.
 
 ## Explique o que é o Fastify e como ele é usado em aplicações Node.js.
