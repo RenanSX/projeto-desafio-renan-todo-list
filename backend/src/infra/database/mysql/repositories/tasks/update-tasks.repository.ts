@@ -1,4 +1,4 @@
-import Task from '@/data/entity/task.entity'
+import Task from '@/infra/database/mysql/entity/task.entity'
 import { IUpdateTaskRepository } from '@/data/protocols/database/tasks'
 
 export class UpdateTaskRepository implements IUpdateTaskRepository {

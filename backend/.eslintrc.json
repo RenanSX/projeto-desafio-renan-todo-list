@@ -25,16 +25,7 @@
   ],
   "rules": {
     "space-before-function-parent": 0,
-    "import-helpers/order-imports": [
-      "warn",
-      {
-        "newlinesBetween": "always",
-        "alphabetize": {
-          "order": "asc",
-          "ignoreCase": true
-        }
-      }
-    ],
+    "import-helpers/order-imports": "off",
     "no-console": "error",
     "prettier/prettier": [
       "error",

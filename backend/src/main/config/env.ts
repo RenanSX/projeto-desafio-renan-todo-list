@@ -1,9 +1,7 @@
 export default {
   logLevel: process.env.LOG_LEVEL || 'debug',
   corsOrigin: process.env.CORS_ORIGIN || 'http://localhost:3000',
-  port: parseInt(process.env.PORT || '5000', 10),
-  jwtSecret: process.env.JWT_SECRET || 'er123lan_local',
-  cookieSecret: process.env.COOKIE_SECRET || 'lu123cio_local',
+  port: parseInt(process.env.PORT || '3333', 10),
   dbName: process.env.DB_NAME,
   dbPort: process.env.DB_PORT,
   dbHost: process.env.DB_HOST,
