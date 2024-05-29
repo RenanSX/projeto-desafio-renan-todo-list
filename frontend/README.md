@@ -4,7 +4,7 @@
 
 **desafio-renan-task-list-front** O front do "desafio-renan-task-list" é responsável por gerenciar as tarefas de um usuário, permitindo operações como listagem, detalhamento, criação, atualização e remoção de tarefas.
 
-## 🍂 Pilha de tecnologia
+## Pilha de tecnologia
 
 - [TypeScript](https://www.typescriptlang.org)
 - [React](https://reactjs.org)
@@ -33,7 +33,7 @@ Para visualizar a documentação no Docsify:
 - Em seguida, execute `npm run docs:serve` para levantar um servidor local na porta `7000`.
 - Acesse `http://localhost:7000` no navegador, você deverá ver uma interface amigável para navegar entre os documentos README.md do projeto.
 
-## 🎯 Comandos
+## Comandos
 
 Os comandos abaixo serão executados no nível monorepo - nos aplicativos e pacotes onde existe o script npm.
 
