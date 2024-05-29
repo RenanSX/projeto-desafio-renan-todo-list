@@ -1,7 +1,7 @@
-import Task from '@/data/entity/task.entity'
+import Task from '@/infra/database/mysql/entity/task.entity'
 import { FindTaskRepository } from '@/infra/database/mysql/repositories/tasks'
 
-jest.mock('@/data/entity/task.entity', () => ({
+jest.mock('@/infra/database/mysql/entity/task.entity', () => ({
   findOne: jest.fn().mockResolvedValue({
     uuid: 'test_uuid',
     title: 'Test Task',

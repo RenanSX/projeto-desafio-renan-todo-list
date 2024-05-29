@@ -19,6 +19,14 @@
 
 ## Como Executar
 
+### Banco de dados
+
+O banco de dados já estará disponível no momento da execução desse teste mas existem alguns comandos de criação de migração que foram utilizados no processo de desenvolvimento, são eles:
+
+1. Criação do banco de dados, acesse a pasta de backend e rode `npm run db:create`
+2. Criação das migrations, na basta do backend rode `npm run migration:up`
+3. Caso seja necessário desfazer as alteraçẽos de migração, rode `npm run migration:down`
+
 ### Docker Compose
 
 1. Certifique-se de ter Docker e Docker Compose.
@@ -33,6 +41,7 @@
 
 3. Volte a raiz do projeto `cd ..` e execute `docker-compose up -d --build`.
 4. O frontend vai estar disponivel em `http://localhost:3000` e o backend em `http://localhost:3333`. Isso vai subir tanto o backend quanto o frontend em containers Docker.
+5. Ao finalizar rode `docker-compose down -v` para parar os containeres.
 
 Observações:
 
@@ -92,6 +101,10 @@ Execeute os comandos de teste em cada projeto, ambos utilizam o Jest, basta aces
 ## Contribuição
 
 Contribuições são bem-vindas para melhorar a documentação, adicionar funcionalidades ou corrigir bugs. Crie um pull request ou abra uma issue para colaborar.
+
+## Melhorias Futuras
+
+- É preciso criar a cobertura de testes para ao frontend que está faltando
 
 ## Licença
 

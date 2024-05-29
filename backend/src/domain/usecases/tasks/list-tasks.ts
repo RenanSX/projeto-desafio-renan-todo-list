@@ -1,4 +1,4 @@
-import { TaskOutput } from '@/data/entity/task.entity'
+import { TaskOutput } from '@/infra/database/mysql/entity/task.entity'
 
 export namespace IListTasks {
   export type Result = Array<TaskOutput>

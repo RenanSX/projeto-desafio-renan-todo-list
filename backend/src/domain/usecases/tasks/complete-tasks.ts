@@ -1,4 +1,4 @@
-import { TaskCompleteInput, TaskOutput } from '@/data/entity/task.entity'
+import { TaskCompleteInput, TaskOutput } from '@/infra/database/mysql/entity/task.entity'
 
 export namespace ICompleteTask {
   export type Params = { id: string } & TaskCompleteInput

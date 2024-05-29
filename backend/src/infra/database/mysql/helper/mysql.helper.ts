@@ -1,10 +1,10 @@
-import Task from '@/data/entity/task.entity'
+import Task from '@/infra/database/mysql/entity/task.entity'
 import env from '@/main/config/env'
 import { Sequelize } from 'sequelize'
 
 export const connectionDatabase = new Sequelize(env.dbName, env.dbUser, env.dbPassword, {
   host: env.dbHost,
-  port: Number(env.dbPort),
+  port: parseInt(env.dbPort || '3306', 10),
   dialect: 'mysql'
 })
 export const databaseInit = async (): Promise<void> => {
